@@ -1,0 +1,370 @@
+{
+  "validation": {
+    "months_compared": 195,
+    "mae_pp": 0.014,
+    "max_abs_pp": 0.35
+  },
+  "years": 23,
+  "drop_median_pp": 40.0,
+  "drop_q1_pp": 34.0,
+  "drop_q3_pp": 48.8,
+  "drop_median_mcm": 347,
+  "corr_may_low": 0.82,
+  "mae_pp": {
+    "climatology": 16.4,
+    "subtract": 9.3,
+    "ols": 9.5
+  },
+  "mae_reduction_pct": 43,
+  "forecast_years": [
+    2006,
+    2023,
+    18
+  ],
+  "worst_misses": {
+    "2013": 22.2,
+    "2022": 19.2
+  },
+  "years_below_20": [
+    2007,
+    2014,
+    2008,
+    2023,
+    2020
+  ],
+  "record_low": {
+    "year": 2007,
+    "pct": 9.5,
+    "week": "2007-11-05"
+  },
+  "may_below_50": {
+    "years": [
+      2007,
+      2008,
+      2014,
+      2023
+    ],
+    "ended_below_20": 4
+  },
+  "dam_share_months_below_20": {
+    "Ömerli": 4.7,
+    "Darlık": 5.1,
+    "Elmalı": 10.5,
+    "Terkos": 1.4,
+    "Alibey": 11.6,
+    "Büyükçekmece": 8.0,
+    "Sazlıdere": 13.0,
+    "Kazandere": 22.1,
+    "Pabuçdere": 25.0,
+    "Istrancalar": 2.9
+  },
+  "yearly": [
+    {
+      "year": 2001,
+      "may": 71.3,
+      "low": 33.0,
+      "low_week": "2001-11-19",
+      "drop": 38.3
+    },
+    {
+      "year": 2002,
+      "may": 93.5,
+      "low": 65.3,
+      "low_week": "2002-10-28",
+      "drop": 28.2
+    },
+    {
+      "year": 2003,
+      "may": 99.5,
+      "low": 61.0,
+      "low_week": "2003-10-13",
+      "drop": 38.5
+    },
+    {
+      "year": 2004,
+      "may": 96.2,
+      "low": 43.2,
+      "low_week": "2005-01-10",
+      "drop": 53.0
+    },
+    {
+      "year": 2005,
+      "may": 90.4,
+      "low": 49.9,
+      "low_week": "2005-11-14",
+      "drop": 40.5
+    },
+    {
+      "year": 2006,
+      "may": 95.4,
+      "low": 54.5,
+      "low_week": "2006-10-23",
+      "drop": 40.9
+    },
+    {
+      "year": 2007,
+      "may": 49.5,
+      "low": 9.5,
+      "low_week": "2007-11-05",
+      "drop": 40.0
+    },
+    {
+      "year": 2008,
+      "may": 42.7,
+      "low": 16.2,
+      "low_week": "2008-09-15",
+      "drop": 26.5
+    },
+    {
+      "year": 2009,
+      "may": 97.1,
+      "low": 75.1,
+      "low_week": "2009-08-31",
+      "drop": 22.0
+    },
+    {
+      "year": 2010,
+      "may": 97.3,
+      "low": 63.4,
+      "low_week": "2010-10-04",
+      "drop": 33.9
+    },
+    {
+      "year": 2011,
+      "may": 97.3,
+      "low": 52.5,
+      "low_week": "2011-12-12",
+      "drop": 44.8
+    },
+    {
+      "year": 2012,
+      "may": 94.2,
+      "low": 45.9,
+      "low_week": "2012-11-26",
+      "drop": 48.3
+    },
+    {
+      "year": 2013,
+      "may": 91.1,
+      "low": 29.6,
+      "low_week": "2014-02-24",
+      "drop": 61.5
+    },
+    {
+      "year": 2014,
+      "may": 30.2,
+      "low": 15.1,
+      "low_week": "2014-09-08",
+      "drop": 15.1
+    },
+    {
+      "year": 2015,
+      "may": 95.5,
+      "low": 58.6,
+      "low_week": "2015-12-28",
+      "drop": 36.9
+    },
+    {
+      "year": 2016,
+      "may": 84.5,
+      "low": 34.7,
+      "low_week": "2016-11-21",
+      "drop": 49.8
+    },
+    {
+      "year": 2017,
+      "may": 86.2,
+      "low": 52.2,
+      "low_week": "2017-10-16",
+      "drop": 34.0
+    },
+    {
+      "year": 2018,
+      "may": 88.2,
+      "low": 47.3,
+      "low_week": "2018-11-12",
+      "drop": 40.9
+    },
+    {
+      "year": 2019,
+      "may": 90.9,
+      "low": 33.7,
+      "low_week": "2019-12-23",
+      "drop": 57.2
+    },
+    {
+      "year": 2020,
+      "may": 68.7,
+      "low": 19.5,
+      "low_week": "2021-01-04",
+      "drop": 49.2
+    },
+    {
+      "year": 2021,
+      "may": 80.9,
+      "low": 41.2,
+      "low_week": "2021-12-06",
+      "drop": 39.7
+    },
+    {
+      "year": 2022,
+      "may": 88.1,
+      "low": 28.9,
+      "low_week": "2023-01-30",
+      "drop": 59.2
+    },
+    {
+      "year": 2023,
+      "may": 49.0,
+      "low": 16.7,
+      "low_week": "2023-11-06",
+      "drop": 32.3
+    }
+  ],
+  "backtest": [
+    {
+      "year": 2006,
+      "may": 95.4,
+      "actual": 54.5,
+      "climatology": 50.5,
+      "subtract": 56.9,
+      "ols": 55.1
+    },
+    {
+      "year": 2007,
+      "may": 49.5,
+      "actual": 9.5,
+      "climatology": 51.2,
+      "subtract": 10.0,
+      "ols": 14.7
+    },
+    {
+      "year": 2008,
+      "may": 42.7,
+      "actual": 16.2,
+      "climatology": 45.2,
+      "subtract": 2.7,
+      "ols": 4.0
+    },
+    {
+      "year": 2009,
+      "may": 97.1,
+      "actual": 75.1,
+      "climatology": 41.6,
+      "subtract": 57.8,
+      "ols": 56.2
+    },
+    {
+      "year": 2010,
+      "may": 97.3,
+      "actual": 63.4,
+      "climatology": 45.3,
+      "subtract": 58.8,
+      "ols": 59.6
+    },
+    {
+      "year": 2011,
+      "may": 97.3,
+      "actual": 52.5,
+      "climatology": 47.1,
+      "subtract": 58.9,
+      "ols": 60.2
+    },
+    {
+      "year": 2012,
+      "may": 94.2,
+      "actual": 45.9,
+      "climatology": 47.6,
+      "subtract": 55.7,
+      "ols": 56.4
+    },
+    {
+      "year": 2013,
+      "may": 91.1,
+      "actual": 29.6,
+      "climatology": 47.5,
+      "subtract": 51.8,
+      "ols": 52.6
+    },
+    {
+      "year": 2014,
+      "may": 30.2,
+      "actual": 15.1,
+      "climatology": 46.1,
+      "subtract": 0.0,
+      "ols": -1.8
+    },
+    {
+      "year": 2015,
+      "may": 95.5,
+      "actual": 58.6,
+      "climatology": 43.9,
+      "subtract": 56.2,
+      "ols": 54.0
+    },
+    {
+      "year": 2016,
+      "may": 84.5,
+      "actual": 34.7,
+      "climatology": 44.9,
+      "subtract": 46.0,
+      "ols": 46.2
+    },
+    {
+      "year": 2017,
+      "may": 86.2,
+      "actual": 52.2,
+      "climatology": 44.2,
+      "subtract": 47.0,
+      "ols": 46.7
+    },
+    {
+      "year": 2018,
+      "may": 88.2,
+      "actual": 47.3,
+      "climatology": 44.7,
+      "subtract": 49.7,
+      "ols": 48.5
+    },
+    {
+      "year": 2019,
+      "may": 90.9,
+      "actual": 33.7,
+      "climatology": 44.8,
+      "subtract": 51.6,
+      "ols": 50.5
+    },
+    {
+      "year": 2020,
+      "may": 68.7,
+      "actual": 19.5,
+      "climatology": 44.2,
+      "subtract": 28.7,
+      "ols": 33.3
+    },
+    {
+      "year": 2021,
+      "may": 80.9,
+      "actual": 41.2,
+      "climatology": 43.0,
+      "subtract": 40.7,
+      "ols": 41.4
+    },
+    {
+      "year": 2022,
+      "may": 88.1,
+      "actual": 28.9,
+      "climatology": 42.9,
+      "subtract": 48.1,
+      "ols": 46.9
+    },
+    {
+      "year": 2023,
+      "may": 49.0,
+      "actual": 16.7,
+      "climatology": 42.3,
+      "subtract": 8.8,
+      "ols": 16.9
+    }
+  ]
+}
