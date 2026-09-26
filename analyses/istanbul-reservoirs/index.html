@@ -547,5 +547,49 @@ const DATA = JSON.parse(document.getElementById("pd-data").textContent);
 })();
 
 </script>
+
+<div class="pd-buddy" hidden>
+  <p class="say" aria-live="polite"></p>
+  <canvas aria-hidden="true" title="Click to wave"></canvas>
+  <button type="button" class="x" aria-label="Hide the octopus">✕</button>
+</div>
+<style>
+.pd-buddy{position:fixed;right:12px;bottom:6px;z-index:40;display:flex;align-items:flex-end;pointer-events:none}
+.pd-buddy canvas{width:124px;height:124px;pointer-events:auto;cursor:pointer}
+.pd-buddy .say{pointer-events:auto;max-width:210px;margin:0 -6px 76px 0;padding:8px 11px;transition:opacity .4s;border-radius:12px 12px 2px 12px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--line);box-shadow:var(--shadow);font:500 12.5px/1.4 var(--f-body)}
+.pd-buddy .say.quiet{opacity:0}
+.pd-buddy .say b{color:var(--accent);font-weight:600}
+.pd-buddy .x{position:absolute;right:4px;top:-4px;pointer-events:auto;width:24px;height:24px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;font:12px/1 var(--f-body)}
+@media (max-width:700px){.pd-buddy canvas{width:100px;height:100px}.pd-buddy .say{max-width:170px;margin-bottom:58px;font-size:12px}}
+@media print{.pd-buddy{display:none}}
+</style>
+<script>PD.on("frame", (i) => { window.__pdFrame = i; });</script>
+<script type="module">
+const box = document.querySelector(".pd-buddy");
+const can = !matchMedia("(prefers-reduced-motion: reduce)").matches && !!document.createElement("canvas").getContext("webgl2");
+let off = false; try { off = sessionStorage.getItem("pd-buddy") === "off"; } catch (e) {}
+if (can && !off) (window.requestIdleCallback || setTimeout)(async () => {
+  const { mountBuddy } = await import("../../assets/oda.js");
+  const b = mountBuddy(box.querySelector("canvas"), { hat: true });
+  const say = box.querySelector(".say"), fmt = new Intl.DateTimeFormat("en", { month: "short", year: "numeric" });
+  const show = (i) => {
+    const m = DATA.months[i], v = DATA.city[i];
+    if (v == null) return;
+    const when = fmt.format(new Date(+m.slice(0, 4), +m.slice(5, 7) - 1, 15));
+    const [mood, note] = v < DATA.low ? ["low", "below the 20% line"] : v < 35 ? ["low", "getting low"] : v >= 85 ? ["high", "nearly full"] : ["ok", "within the usual range"];
+    say.innerHTML = `<b>${when}</b> · city-wide ${v.toFixed(0)}% — ${note}.`;
+    say.classList.remove("quiet"); clearTimeout(quiet); quiet = setTimeout(() => say.classList.add("quiet"), 6000);
+    b.mood(mood);
+  };
+  let quiet = 0;
+  show(window.__pdFrame ?? DATA.start);
+  PD.on("frame", show);
+  box.hidden = false;
+  box.querySelector("canvas").addEventListener("click", () => { b.wave(); show(window.__pdFrame ?? DATA.start); });
+  box.querySelector(".x").addEventListener("click", () => { box.remove(); try { sessionStorage.setItem("pd-buddy", "off"); } catch (e) {} });
+}, { timeout: 2500 });
+</script>
+
 </body>
 </html>
