@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bordeaux → Türkiye · Sertan Şafak</title>
+<meta name="description" content="14.349 Bordeaux şarabının tadım notlarından 90+ puan tahmini; her şarap için peynir eşleşmesi, Türkiye'deki muadilleri ve en yakın satış noktası.">
+<meta name="author" content="Sertan Şafak">
+<meta property="og:title" content="Bordeaux → Türkiye: what makes a 90-point wine?">
+<meta property="og:description" content="14,349 Bordeaux reviews, a leakage-checked model, cheese pairings and Turkish equivalents.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M9 3h14c0 9-3 13-7 13S9 12 9 3zM16 16v10M10 29h12' fill='none' stroke='%237a1f33' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>(function(){try{var m=localStorage.getItem("pd-theme");if(m)document.documentElement.setAttribute("data-theme",m)}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://setosfk.github.io/">Sertan Şafak</a>
+  <span class="crumb">/ <span data-i="crumb"></span></span>
+  <span class="sp"></span>
+  <button class="pill" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="pill" id="theme" type="button" aria-label="Theme">◐</button>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><b>●</b> <span data-i="kicker"></span></div>
+    <h1 data-i="title"></h1>
+    <p class="lede" data-i="lede"></p>
+  </section>
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <section class="block">
+    <h2 data-i="appTitle"></h2>
+    <p class="sub" data-i="appSub"></p>
+    <div class="tabs" role="tablist">
+      <button class="pill" role="tab" id="tab-name" aria-pressed="true" data-i="tabName"></button>
+      <button class="pill" role="tab" id="tab-taste" aria-pressed="false" data-i="tabTaste"></button>
+    </div>
+    <div class="explorer">
+      <div class="card panel" id="left"></div>
+      <div class="card detail" id="detail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="anTitle"></h2>
+    <p class="sub" data-i="anSub"></p>
+    <div class="charts">
+      <div class="card chart"><h3 data-i="c1t"></h3><p data-i="c1s"></p><div id="c1"></div></div>
+      <div class="card chart"><h3 data-i="c2t"></h3><p data-i="c2s"></p><div id="c2"></div></div>
+      <div class="card chart"><h3 data-i="c3t"></h3><p data-i="c3s"></p>
+        <div class="tabs"><button class="pill" id="w-s" aria-pressed="true" data-i="wS"></button><button class="pill" id="w-a" aria-pressed="false" data-i="wA"></button></div>
+        <div id="c3"></div></div>
+      <div class="card chart"><h3 data-i="c4t"></h3><p data-i="c4s"></p><div id="c4"></div></div>
+    </div>
+    <div class="boxes">
+      <div class="card box"><h3 data-i="found"></h3><ol id="found"></ol></div>
+      <div class="card box warn"><h3 data-i="care"></h3><ul id="care"></ul></div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b data-i="fData"></b><span data-i="fDataTxt"></span></div>
+    <div><b data-i="fMethod"></b><span data-i="fMethodTxt"></span></div>
+    <div><b data-i="fRepro"></b><pre>pip install -r python/requirements.txt
+python python/run_analysis.py
+python python/build_web.py
+Rscript R/run_analysis.R</pre><a href="https://github.com/SETOsfk/wineapp">github.com/SETOsfk/wineapp</a></div>
+    <div><b data-i="fLegal"></b><span data-i="fLegalTxt"></span></div>
+  </footer>
+</main>
+
+<dialog id="age"><p data-i="age"></p><form method="dialog" class="row"><button class="btn" value="yes" data-i="ageYes"></button><a class="btn ghost" href="https://setosfk.github.io/" data-i="ageNo"></a></form></dialog>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js"></script>
+</body>
+</html>

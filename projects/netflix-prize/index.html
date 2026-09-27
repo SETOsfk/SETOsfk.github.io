@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Netflix Prize, Yeniden · Sertan Şafak</title>
+<meta name="description" content="100 milyon puanlık Netflix Prize verisinde \"0,81 RMSE\" ne anlama geliyordu? Resmî probe kümesinde aynı modeller, film benzerlik gezgini ve dürüst karşılaştırma.">
+<meta name="author" content="Sertan Şafak">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='8' width='22' height='16' rx='2' fill='none' stroke='%23b0272f' stroke-width='2.5'/%3E%3Cpath d='M14 12l6 4-6 4z' fill='%23b0272f'/%3E%3C/svg%3E">
+<script>(function(){try{var m=localStorage.getItem("pd-theme");if(m)document.documentElement.setAttribute("data-theme",m)}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://setosfk.github.io/">Sertan Şafak</a>
+  <span class="crumb">/ <span data-i="crumb"></span></span>
+  <span class="sp"></span>
+  <button class="pill" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="pill" id="theme" type="button" aria-label="Theme">◐</button>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><b>●</b> <span data-i="kicker"></span></div>
+    <h1 data-i="title"></h1>
+    <p class="lede" data-i="lede"></p>
+  </section>
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <section class="block">
+    <h2 data-i="appTitle"></h2>
+    <p class="sub" data-i="appSub"></p>
+    <div class="explorer">
+      <div class="card panel" id="left"></div>
+      <div class="card detail" id="detail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="anTitle"></h2>
+    <p class="sub" data-i="anSub"></p>
+    <div class="charts">
+      <div class="card chart"><h3 data-i="c1t"></h3><p data-i="c1s"></p><div id="c1"></div></div>
+      <div class="card chart"><h3 data-i="c2t"></h3><p data-i="c2s"></p><div id="c2"></div></div>
+      <div class="card chart"><h3 data-i="c3t"></h3><p data-i="c3s"></p><div id="c3"></div></div>
+      <div class="card chart"><h3 data-i="c4t"></h3><p data-i="c4s"></p><div id="c4"></div></div>
+    </div>
+    <div class="boxes">
+      <div class="card box"><h3 data-i="found"></h3><ol id="found"></ol></div>
+      <div class="card box warn"><h3 data-i="care"></h3><ul id="care"></ul></div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b data-i="fData"></b><span data-i="fDataTxt"></span></div>
+    <div><b data-i="fTeam"></b><span data-i="fTeamTxt"></span></div>
+    <div><b data-i="fRepro"></b><pre>python reanalysis/python/prepare.py
+python reanalysis/python/run_analysis.py
+python reanalysis/python/build_web.py
+Rscript reanalysis/R/run_analysis.R</pre><a href="https://github.com/SETOsfk/netflix-prize-data-analysis">github.com/SETOsfk/netflix-prize-data-analysis</a></div>
+  </footer>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js"></script>
+</body>
+</html>

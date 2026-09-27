@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>İskoç Viskisi Tat Atlası · Sertan Şafak</title>
+<meta name="description" content="86 İskoç damıtımevinin 12 boyutlu tat atlası: tat coğrafyayı izliyor mu, Whisky Advocate hangi tadı ödüllendiriyor? Her damıtımevi için benzerleri, Türkiye'de satılan en yakın tat, peynir eşleşmesi ve en yakın satış noktası.">
+<meta name="author" content="Sertan Şafak">
+<meta property="og:title" content="Scotch Whisky Flavour Atlas">
+<meta property="og:description" content="86 distilleries, 12 flavours: does taste follow geography? Closest taste sold in Türkiye, cheese pairings and shops nearby.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M8 6h16l-2 21H10z M9 15h14' fill='none' stroke='%2393520f' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>(function(){try{var m=localStorage.getItem("pd-theme");if(m)document.documentElement.setAttribute("data-theme",m)}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://setosfk.github.io/">Sertan Şafak</a>
+  <span class="crumb">/ <span data-i="crumb"></span></span>
+  <span class="sp"></span>
+  <button class="pill" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="pill" id="theme" type="button" aria-label="Theme">◐</button>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><b>●</b> <span data-i="kicker"></span></div>
+    <h1 data-i="title"></h1>
+    <p class="lede" data-i="lede"></p>
+  </section>
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <section class="block">
+    <h2 data-i="appTitle"></h2>
+    <p class="sub" data-i="appSub"></p>
+    <div class="tabs" role="tablist">
+      <button class="pill" role="tab" id="tab-map" aria-pressed="true" data-i="tabMap"></button>
+      <button class="pill" role="tab" id="tab-taste" aria-pressed="false" data-i="tabTaste"></button>
+    </div>
+    <div class="explorer">
+      <div class="card panel" id="left"></div>
+      <div class="card detail" id="detail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="shelfTitle"></h2>
+    <p class="sub" data-i="shelfSub"></p>
+    <div class="card panel" id="shelf"></div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="anTitle"></h2>
+    <p class="sub" data-i="anSub"></p>
+    <div class="charts">
+      <div class="card chart"><h3 data-i="c1t"></h3><p data-i="c1s"></p><div id="c1"></div></div>
+      <div class="card chart"><h3 data-i="c2t"></h3><p data-i="c2s"></p><div id="c2"></div></div>
+      <div class="card chart"><h3 data-i="c3t"></h3><p data-i="c3s"></p><div id="c3"></div></div>
+      <div class="card chart"><h3 data-i="c4t"></h3><p data-i="c4s"></p><div id="c4"></div></div>
+      <div class="card chart"><h3 data-i="c5t"></h3><p data-i="c5s"></p><div id="c5"></div></div>
+      <div class="card chart"><h3 data-i="c6t"></h3><p data-i="c6s"></p><div id="c6"></div></div>
+    </div>
+    <div class="boxes">
+      <div class="card box"><h3 data-i="found"></h3><ol id="found"></ol></div>
+      <div class="card box warn"><h3 data-i="care"></h3><ul id="care"></ul></div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b data-i="fData"></b><span data-i="fDataTxt"></span></div>
+    <div><b data-i="fMethod"></b><span data-i="fMethodTxt"></span></div>
+    <div><b data-i="fRepro"></b><pre>pip install -r python/requirements.txt
+python python/run_analysis.py
+python python/build_web.py
+Rscript R/run_analysis.R</pre><a href="https://github.com/SETOsfk/scotch-whisky-atlas">github.com/SETOsfk/scotch-whisky-atlas</a></div>
+    <div><b data-i="fLegal"></b><span data-i="fLegalTxt"></span></div>
+  </footer>
+</main>
+
+<dialog id="age"><p data-i="age"></p><form method="dialog" class="row"><button class="btn" value="yes" data-i="ageYes"></button><a class="btn ghost" href="https://setosfk.github.io/" data-i="ageNo"></a></form></dialog>
+<div class="tip" id="tip" role="tooltip"></div>
+<script src="app.js"></script>
+</body>
+</html>
