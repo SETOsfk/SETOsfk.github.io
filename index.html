@@ -242,27 +242,29 @@ footer{max-width:880px;margin:0 auto;padding:22px clamp(16px,4vw,24px) 40px;disp
   <p class="tags">Python (pandas, NumPy, scikit-learn, SciPy) · SQL / PL-SQL · R and Shiny · gradient boosting, clustering, dimensionality reduction, ranking and recommender systems · Power BI, Tableau, Oracle Data Integrator · Git · Turkish (native) · English (C1)</p>
 </section>
 <section class="sec" id="work" data-title="Featured project">
-  <h2 class="sec-h"><b>Featured project</b><span>open source · Python · MIT</span></h2>
+  <h2 class="sec-h"><b>Featured project</b><span>open source · Python · MIT · v0.1.0</span></h2>
   <div class="card">
     <h3><a href="https://github.com/SETOsfk/muzik-kesif-motoru">Music Discovery Engine</a></h3>
     <p>I listen to my own FLAC library on a portable player, so no streaming recommender ever sees what I play — and I stopped discovering new music. This engine reads the library, pulls who played on each record from MusicBrainz and Discogs, finds my taste axes with fuzzy clustering, and ranks artists I have never heard of. Every ranking change is scored before it ships.</p>
+    <p>Version 0.1.0 opens it to other people: sign up, type the artists you love (or connect Spotify) and swipe through 30-second previews — right to save, left to skip, up for “already know it”. Without a FLAC library, taste axes come from the sound alone (CLAP audio embeddings), which scored about the same as credit-based clustering on my own library. Turkish and English, one Docker command to deploy with HTTPS.</p>
     <div class="stats">
       <div class="stat"><b>0.059</b><span>median percentile of the hidden artist, vs 0.500 for random</span></div>
       <div class="stat"><b>0.14 → 0.27</b><span>recall@50 from one evidence-weighting fix</span></div>
-      <div class="stat"><b>92%</b><span>of 302 albums matched to MusicBrainz</span></div>
-      <div class="stat"><b>191</b><span>tests · ~17,500 lines · 20-table SQLite schema</span></div>
+      <div class="stat"><b>95%</b><span>of 302 albums matched to MusicBrainz</span></div>
+      <div class="stat"><b>285</b><span>tests · ~29,700 lines · 24 SQLite tables, shared + per user</span></div>
     </div>
     <ul class="lessons">
+      <li><strong>The offline winner lost on real decisions.</strong>The hybrid source ranked first in the leave-one-artist-out test, but on my own swipes it was a hit 25% of the time (90% Wilson interval 10–49%, n = 12) against 67% for sound similarity (25–92%, n = 3). The offline metric was rewarding shared language, not shared style — it put a Turkish pop singer on my grunge axis. The swipe deck now splits its cards between sources by Thompson sampling on real decisions instead of the offline score.</li>
       <li><strong>I rejected the setting with the best recall.</strong>A parameter sweep showed recall saturating while a popularity proxy kept climbing: the metric-optimal setting made recommendations more mainstream than my own library. That is the opposite of the goal, so I kept the metric-suboptimal one and now report a side-effect metric next to every accuracy metric.</li>
       <li><strong>A model that looked fine and didn't transfer — documented, not shipped.</strong>A gradient-boosted genre classifier trained on 106,574 tracks × 518 features, split by artist to prevent leakage, scored 0.677 accuracy (0.521 macro-F1, 9 classes). On my own audio it collapsed. Comparing feature distributions found 25 columns at |z| &gt; 3, traced to a 22.05 kHz caching decision plus domain shift.</li>
       <li><strong>The largest gain wasn't a new model.</strong>A co-occurrence score saturated after two playlists, so "together in 2 lists" and "together in 16" looked identical. Weighting it by the evidence behind it beat every feature I had added in the preceding weeks.</li>
-      <li><strong>Most of the hours went to entity resolution.</strong>Six measured fixes to the matching rules (reissue years, subtitles, stage names vs. band names, typographic dashes…), 106 artist aliases merged across Latin and Japanese scripts — and the last 24 albums left unmatched on purpose, because a wrong match is worse than none.</li>
+      <li><strong>Most of the hours went to entity resolution.</strong>Six measured fixes to the matching rules (reissue years, subtitles, stage names vs. band names, typographic dashes…), 106 artist aliases merged across Latin and Japanese scripts, a catalogue search by stage name — and the last 14 albums left to a human decision, because a wrong match is worse than none.</li>
     </ul>
     <div class="figs">
-      <figure><a href="assets/oneriler.png"><img src="assets/oneriler.png" alt="Recommendation screen of the Music Discovery Engine" loading="lazy" width="1100" height="1213"></a><figcaption>Recommendation cards, each with a 30-second preview and the reason it was suggested (interface in Turkish).</figcaption></figure>
+      <figure><a href="assets/oneriler.png"><img src="assets/oneriler.png" alt="Recommendation screen of the Music Discovery Engine" loading="lazy" width="1100" height="1213"></a><figcaption>Recommendation cards, each with a 30-second preview and the reason it was suggested (Turkish interface; English is available too).</figcaption></figure>
       <figure><a href="assets/ses-kumeleri.png"><img src="assets/ses-kumeleri.png" alt="Sound clusters found from audio embeddings without any genre labels" loading="lazy" width="1100" height="1011"></a><figcaption>Clusters from CLAP audio embeddings with no genre labels at all — Kendrick Lamar, Eminem and Madvillain land together; so do Casiopea and Plini.</figcaption></figure>
     </div>
-    <a class="more" href="https://github.com/SETOsfk/muzik-kesif-motoru">Code, evaluation tables and the full decision log →</a>
+    <a class="more" href="https://github.com/SETOsfk/muzik-kesif-motoru">Code, evaluation tables, the full decision log and the deploy guide →</a>
   </div>
 </section>
 <section class="sec" id="analyses" data-title="Analyses">
