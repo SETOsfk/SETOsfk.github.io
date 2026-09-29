@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viski ve Şarap Bulucu · Sertan Şafak</title>
+<meta name="description" content="Tadını seç, Türkiye'de satılan viski ve şarabı bul; yanına peynir ve atıştırmalık, ortalama fiyat ve en yakın mağazalar. Tat profilleri Computational Wine Wheel ve ona göre kurulan Computational Whisky Wheel'den.">
+<meta name="author" content="Sertan Şafak">
+<meta property="og:title" content="Whisky & Wine Finder">
+<meta property="og:description" content="Pick a taste, find the bottle sold in Türkiye, add a cheese or snack, see the average price and the nearest shops.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M8 6h16l-2 21H10z M9 15h14' fill='none' stroke='%2393520f' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>(function(){try{var m=localStorage.getItem("pd-theme");if(m)document.documentElement.setAttribute("data-theme",m)}catch(e){}})()</script>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="leaflet/leaflet.css">
+<style>
+  .lay2 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 18px; align-items: start; }
+  @media (max-width: 960px) { .lay2 { grid-template-columns: 1fr; } }
+  .panel h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .results .meta b { color: var(--accent); font-weight: 600; }
+  .mini .row { gap: 8px; align-items: center; margin-top: 6px; }
+  .mini .p { font-weight: 600; }
+  .add { border: 1px solid var(--accent); background: none; color: var(--accent); border-radius: 999px; padding: 2px 10px; cursor: pointer; font-size: .82rem; margin-left: auto; }
+  .add:hover { background: var(--accent); color: #fff; }
+  .add[data-n]:not([data-n="0"])::after { content: " · " attr(data-n); }
+  .price { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; margin: 12px 0 4px; }
+  .price .big { font-size: 1.9rem; }
+  .qty { display: inline-flex; align-items: center; gap: 4px; }
+  .qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); cursor: pointer; line-height: 1; }
+  .qty button:hover { border-color: var(--ink); }
+  .tot { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .tot .big { font-size: 1.8rem; }
+  #map { height: 340px; border-radius: 10px; border: 1px solid var(--line); margin: 12px 0 4px; isolation: isolate; }
+  #map[hidden] { display: none; }
+  .grp { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
+  .shops li .nm { flex: 1; min-width: 0; }
+  .leaflet-container { font: 13px var(--f); }
+  .leaflet-popup-content a { color: var(--accent); }
+  .prof b { font-weight: 600; }
+  .lift { font: .78rem var(--m); color: var(--muted); min-width: 3.4em; text-align: right; }
+  .howcols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .howcols ol { margin: 6px 0 0; padding-left: 20px; }
+  .howcols li { margin: 5px 0; }
+  .refs { font-size: .84rem; color: var(--ink-2); margin: 0; padding-left: 18px; }
+  .refs li { margin: 3px 0; }
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://setosfk.github.io/">Sertan Şafak</a>
+  <span class="crumb">/ <span data-i="crumb"></span></span>
+  <span class="sp"></span>
+  <button class="pill" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="pill" id="theme" type="button" aria-label="Theme">◐</button>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><b>●</b> <span data-i="kicker"></span></div>
+    <h1 data-i="title"></h1>
+    <p class="lede" data-i="lede"></p>
+  </section>
+  <section class="kpis" id="kpis" aria-label="Key numbers"></section>
+
+  <section class="block">
+    <h2 data-i="findTitle"></h2>
+    <p class="sub" data-i="findSub"></p>
+    <div class="tabs" role="tablist">
+      <button class="pill" type="button" id="tab-whisky" aria-pressed="true" data-i="whisky"></button>
+      <button class="pill" type="button" id="tab-wine" aria-pressed="false" data-i="wine"></button>
+    </div>
+    <div class="explorer">
+      <div class="card panel" id="left"></div>
+      <div class="card detail" id="detail" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="block" id="basket-sec">
+    <h2 data-i="basketTitle"></h2>
+    <p class="sub" data-i="basketSub"></p>
+    <div class="lay2">
+      <div class="card panel" id="basket"></div>
+      <div class="card panel" id="shops"></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2 data-i="howTitle"></h2>
+    <p class="sub" data-i="howSub"></p>
+    <div class="howcols">
+      <div class="card box"><h3 data-i="whisky"></h3><ol id="howW"></ol></div>
+      <div class="card box"><h3 data-i="wine"></h3><ol id="howV"></ol></div>
+      <div class="card box warn"><h3 data-i="care"></h3><ul id="care"></ul></div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b data-i="fRefs"></b><ol class="refs" id="refs"></ol></div>
+    <div><b data-i="fData"></b><span data-i="fDataTxt"></span></div>
+    <div><b data-i="fRepro"></b><pre>python python/run_wheel.py
+python python/build_finder.py ../wineapp</pre><a href="https://github.com/SETOsfk/scotch-whisky-atlas">github.com/SETOsfk/scotch-whisky-atlas</a></div>
+    <div><b data-i="fLegal"></b><span data-i="fLegalTxt"></span></div>
+  </footer>
+</main>
+
+<dialog id="age"><p data-i="age18"></p><form method="dialog" class="row"><button class="btn" value="yes" data-i="ageYes"></button><a class="btn ghost" href="https://setosfk.github.io/" data-i="ageNo"></a></form></dialog>
+<script src="leaflet/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

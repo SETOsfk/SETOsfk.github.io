@@ -5,6 +5,7 @@
 const I18N = {
   tr: {
     crumb: "Projeler / Bordeaux → Türkiye", kicker: "Veri bilimi · 14.349 şarap · Python + R",
+    finderLink: "Yeni: viski ve şarap bulucu — tadı seç, yanına peynir ekle, en yakın mağazayı gör →",
     title: "90 puanlık bir Bordeaux'yu ne yapar?",
     lede: "Wine Spectator'ın 2000–2016 Bordeaux tadım notlarından çıkarılmış 985 tanımlayıcıyla 90+ puanı tahmin eden, sızıntıya karşı sınanmış bir model. Her şarap için uygun peynirler, Türkiye'deki muadilleri ve en yakın satış noktası.",
     appTitle: "Şarabını bul", appSub: "Adıyla ara ya da sevdiğin tatları seç. Her şarapta: model tahmini, benzer şaraplar, peynir eşleşmesi, Türk muadilleri ve yakındaki satış noktaları.",
@@ -34,11 +35,12 @@ const I18N = {
     fMethod: "Yöntem", fMethodTxt: "Seyrek ikili öznitelikler; çoğunluk sınıfı, Naive Bayes, lojistik regresyon, doğrusal SVM, rastgele orman, gradyan artırma. Rastgele / şaraba göre gruplu / zamansal (2000–11 → 2012–16) doğrulama. Python (scikit-learn) ve R (glmnet, ranger) aynı katlarla.",
     fRepro: "Yeniden üret", fLegal: "Not", fLegalTxt: "Ticari değildir; hiçbir üretici ya da satıcıyla bağı yoktur, satış yapmaz. 18 yaş ve üzeri içindir.",
     age: "Bu sayfa alkollü içecekler hakkında bilgi içerir. 18 yaşından büyük müsün?", ageYes: "Evet, 18+", ageNo: "Hayır",
-    kpi: (n) => [["En iyi doğruluk", `%${n.best}`, `taban çizgisi %${n.base} · literatür %86,97`], ["Yalnız övgü kelimeleri", `${n.aucPraise} AUC`, `yalnız tat ve yapı: ${n.aucFlavour}`],
+    kpi: (n) => [["En iyi doğruluk", `%${n.best}`, `taban çizgisi %${n.base} · literatür %87,32`], ["Yalnız övgü kelimeleri", `${n.aucPraise} AUC`, `yalnız tat ve yapı: ${n.aucFlavour}`],
           ["Şato sızıntısı", `${n.leak} puan`, `rastgele / gruplu CV: %${n.rand} / %${n.best}`], ["Gelecek rekolteler", `%${n.temp}`, `2012–16'ya taşınınca ${n.tempDrop} puan`]],
   },
   en: {
     crumb: "Projects / Bordeaux → Türkiye", kicker: "Data science · 14,349 wines · Python + R",
+    finderLink: "New: whisky & wine finder — pick a taste, add a cheese, find the nearest shop →",
     title: "What makes a 90-point Bordeaux?",
     lede: "A leakage-checked model that predicts a 90+ score from 985 descriptors extracted from Wine Spectator's 2000–2016 Bordeaux reviews. For every wine: cheeses to pair, Turkish equivalents and the nearest place to buy.",
     appTitle: "Find your wine", appSub: "Search by name or pick the flavours you like. Every wine shows the model's estimate, similar wines, cheese pairings, Turkish equivalents and shops nearby.",
@@ -68,19 +70,19 @@ const I18N = {
     fMethod: "Method", fMethodTxt: "Sparse binary features; majority class, naive Bayes, logistic regression, linear SVM, random forest, gradient boosting. Random / grouped-by-wine / temporal (2000–11 → 2012–16) validation. Python (scikit-learn) and R (glmnet, ranger) on the same folds.",
     fRepro: "Reproduce", fLegal: "Note", fLegalTxt: "Non-commercial; no tie to any producer or seller, sells nothing. For adults 18+.",
     age: "This page contains information about alcoholic drinks. Are you 18 or older?", ageYes: "Yes, 18+", ageNo: "No",
-    kpi: (n) => [["Best accuracy", `${n.best}%`, `baseline ${n.base}% · literature 86.97%`], ["Praise words alone", `${n.aucPraise} AUC`, `flavour & structure alone: ${n.aucFlavour}`],
+    kpi: (n) => [["Best accuracy", `${n.best}%`, `baseline ${n.base}% · literature 87.32%`], ["Praise words alone", `${n.aucPraise} AUC`, `flavour & structure alone: ${n.aucFlavour}`],
           ["Château leakage", `${n.leak} pts`, `random / grouped CV: ${n.rand}% / ${n.best}%`], ["Future vintages", `${n.temp}%`, `${n.tempDrop} pts when moved to 2012–16`]],
   },
 };
 
 const FOUND = {
   tr: (n) => [
-    `Lojistik regresyon %${n.best} doğrulukla literatürdeki en iyi SVM'i (%86,97) yakaladı; ağaç modelleri (RF %${n.rf}, GB %${n.gb}) geçemedi. Seyrek kelime verisinde basit model yetiyor.`,
+    `Lojistik regresyon %${n.best} doğrulukla literatürdeki en iyi sonucu (%87,32, naive Bayes + kategori sayımları; Dong, Atkison ve Chen 2021) yakaladı; ağaç modelleri (RF %${n.rf}, GB %${n.gb}) geçemedi. Seyrek kelime verisinde basit model yetiyor.`,
     `Puanı en iyi "range, serious, excellent, great" gibi övgü kelimeleri tahmin ediyor. Yalnız tat ve yapı kelimeleriyle AUC ${n.aucAll}'den ${n.aucFlavour}'a düşüyor: eleştirmenin hükmü metne sızıyor.`,
     `2024 sürümündeki sızıntı (öznitelik seçimi tüm veride) doğruluğu yalnız ${n.legLeak} puan şişirmiş (%${n.legOut} / %${n.legIn}); asıl kayıp tanımlayıcıları 45'e indirmekti: aynı RF tüm kelimelerle %${n.rf}.`,
   ],
   en: (n) => [
-    `Logistic regression reaches ${n.best}% accuracy, matching the best SVM in the literature (86.97%); tree models (RF ${n.rf}%, GB ${n.gb}%) don't beat it. On sparse word data the simple model is enough.`,
+    `Logistic regression reaches ${n.best}% accuracy, matching the best published result (87.32%, naive Bayes with category counts; Dong, Atkison & Chen 2021); tree models (RF ${n.rf}%, GB ${n.gb}%) don't beat it. On sparse word data the simple model is enough.`,
     `Praise words ("range, serious, excellent, great") predict the score best. Flavour and structure words alone drop AUC from ${n.aucAll} to ${n.aucFlavour}: the critic's verdict leaks into the text.`,
     `The 2024 version's leak (feature selection on all rows) inflated accuracy by only ${n.legLeak} pts (${n.legOut}% vs ${n.legIn}%); the real loss was cutting to 45 descriptors: the same RF with all words scores ${n.rf}%.`,
   ],

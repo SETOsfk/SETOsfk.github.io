@@ -5,6 +5,7 @@
 const I18N = {
   tr: {
     crumb: "Projeler / Viski tat atlası", kicker: "Veri bilimi · 86 damıtımevi · 12 tat · Python + R",
+    finderLink: "Yeni: viski ve şarap bulucu — tadı seç, yanına peynir ekle, en yakın mağazayı gör →",
     title: "İskoç viskisinin tadı coğrafyayı izliyor mu?",
     lede: "86 İskoç damıtımevinin 12 boyutlu tat profili haritada. Tat gerçekten bölgeye mi bağlı, yoksa bu yalnız Islay'in dumanı mı? Her damıtımevi için benzerleri, Türkiye'de satılan en yakın tat, peynir eşleşmesi ve en yakın satış noktası.",
     appTitle: "Damıtımevini keşfet", appSub: "Haritadan ya da adından bir damıtımevi seç — veya sevdiğin tadı ayarla, en yakın damıtımevlerini ve Türkiye'de bulabileceklerini gör.",
@@ -47,6 +48,7 @@ const I18N = {
   },
   en: {
     crumb: "Projects / Whisky flavour atlas", kicker: "Data science · 86 distilleries · 12 flavours · Python + R",
+    finderLink: "New: whisky & wine finder — pick a taste, add a cheese, find the nearest shop →",
     title: "Does Scotch whisky taste follow geography?",
     lede: "The 12-dimension flavour profiles of 86 Scotch distilleries on a map. Is taste really regional — or is it just Islay's smoke? For every distillery: similar ones, the closest taste sold in Türkiye, a cheese to pair and the nearest shop.",
     appTitle: "Explore a distillery", appSub: "Pick a distillery on the map or by name — or dial in the taste you like and see the closest distilleries and what you can buy in Türkiye.",
