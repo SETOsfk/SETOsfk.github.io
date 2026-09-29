@@ -57,7 +57,7 @@ const I18N = {
     locErr: "Konum alınamadı; il seçebilirsin.", ovErr: "OpenStreetMap şu an yanıt vermedi; biraz sonra tekrar dene.",
     stale: "Sepet değişti.", again: "Sepete göre yeniden ara", you: "Sen (yaklaşık)",
     km: "km", open: "haritada aç", route: "yol tarifi", unnamed: "(adsız)",
-    privacy: "Konumun yaklaşık 100 m'ye yuvarlanıp yalnız OpenStreetMap servislerine (Overpass, harita karoları) gider; saklanmaz.",
+    privacy: "Konumun yaklaşık 100 m'ye yuvarlanıp yalnız OpenStreetMap verisi sunan servislere (Overpass API, harita karoları) gider; saklanmaz.",
     legal: "Türkiye'de alkollü içki 22.00–06.00 arası perakende satılamaz, 18 yaş altına satılamaz; posta ile satış yapılamaz (4250 s. Kanun md. 6). Bu yüzden çevrimiçi satış bağlantısı yok.",
     howTitle: "Nasıl çalışıyor?", howSub: "Yöntem Computational Wine Wheel çalışmalarından; viski sözlüğü bu projede kuruldu.",
     howW: (n) => [
@@ -124,7 +124,7 @@ const I18N = {
     locErr: "Could not get your location; pick a province instead.", ovErr: "OpenStreetMap did not answer; try again in a moment.",
     stale: "The basket changed.", again: "Search again for the basket", you: "You (approx.)",
     km: "km", open: "open map", route: "directions", unnamed: "(unnamed)",
-    privacy: "Your location is rounded to about 100 m and sent only to OpenStreetMap services (Overpass, map tiles); nothing is stored.",
+    privacy: "Your location is rounded to about 100 m and sent only to OpenStreetMap data services (the Overpass API, map tiles); nothing is stored.",
     legal: "In Türkiye alcohol cannot be sold at retail between 22:00 and 06:00, to under-18s, or by mail (Law 4250, art. 6) — hence no online-shop links.",
     howTitle: "How it works", howSub: "The method comes from the Computational Wine Wheel papers; the whisky dictionary was built for this project.",
     howW: (n) => [
@@ -358,6 +358,17 @@ function haversine(a, b) {
   const h = Math.sin(dLat / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin(dLon / 2) ** 2;
   return 2 * R * Math.asin(Math.sqrt(h));
 }
+// ponytail: a second public instance only as a fallback — the main one answers 504 when it is busy
+const OVERPASS = ["https://overpass-api.de/api/interpreter", "https://overpass.private.coffee/api/interpreter"];
+async function overpass(q) {
+  for (const ep of OVERPASS) {
+    try {
+      const r = await fetch(ep, { method: "POST", body: "data=" + encodeURIComponent(q), headers: { "Content-Type": "application/x-www-form-urlencoded" } });
+      if (r.ok) return (await r.json()).elements;
+    } catch (e) { /* try the next instance */ }
+  }
+  throw new Error("overpass unavailable");
+}
 async function findShops(p) {
   const at = [Math.round(p[0] * 1000) / 1000, Math.round(p[1] * 1000) / 1000];   // ~100 m, privacy
   const run = ++S.run, found = {};
@@ -368,9 +379,7 @@ async function findShops(p) {
     // ponytail: "out center 1000" caps a huge 40 km answer; nearest-first is exact below the cap, fine for a shop hint
     const q = `[out:json][timeout:25];nwr["shop"~"^(${types.join("|")})$"](around:${radius},${at[0]},${at[1]});out center 1000;`;
     try {
-      const r = await fetch("https://overpass-api.de/api/interpreter", { method: "POST", body: "data=" + encodeURIComponent(q), headers: { "Content-Type": "application/x-www-form-urlencoded" } });
-      if (!r.ok) throw new Error(r.status);
-      const items = (await r.json()).elements.map((e) => {
+      const items = (await overpass(q)).map((e) => {
         const lat = e.lat ?? e.center?.lat, lon = e.lon ?? e.center?.lon, tg = e.tags || {};
         return { id: `${e.type}/${e.id}`, name: tg.name || tg.brand || "", kind: tg.shop, lat, lon, d: lat == null ? 0 : haversine(at, [lat, lon]) };
       }).filter((x) => x.lat != null).sort((a, b) => a.d - b.d);
