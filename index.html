@@ -176,7 +176,8 @@ figcaption{font-size:.8rem;color:var(--muted);margin-top:6px}
 .more{display:inline-block;margin-top:8px;font-weight:500;color:var(--ink)}
 .analysis{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:20px;align-items:start}
 .analysis .map{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--sea)}
-.analysis .map svg{display:block;width:100%;height:auto}
+.analysis .map svg,.analysis .map img{display:block;width:100%;height:auto}
+.analysis + .analysis{margin-top:22px}
 .analysis .k{font:500 12px var(--f-mono);color:var(--muted);letter-spacing:.06em;margin-bottom:6px}
 .analysis .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
 .item{padding:14px 0;border-top:1px solid var(--line)}
@@ -282,6 +283,20 @@ footer{max-width:880px;margin:0 auto;padding:22px clamp(16px,4vw,24px) 40px;disp
       <p style="font-size:.8rem;color:var(--muted);margin-top:8px">Pictured: November 2007, the record low. The monitor in the room plays the same data, month by month.</p>
     </div>
   </div>
+  <div class="card analysis">
+    <a class="map" href="analyses/album-attention/" aria-label="Open the interactive dashboard"><img src="analyses/album-attention/thumb.jpg" alt="Daily Wikipedia views around album releases" loading="lazy" width="720" height="378"></a>
+    <div>
+      <div class="k">Music attention · 2015–2026</div>
+      <h3><a href="analyses/album-attention/">How much attention does a new album buy — and for how long?</a></h3>
+      <p>I wanted more than the 30 days in a Kaggle set, so I pulled 11 years of daily Wikipedia views for 51 artists from Wikimedia and their album histories from MusicBrainz. Across 144 studio albums, release day lifts an artist's page to a median 4.7× its usual level; half of that is gone within 5 days. The dataset is <a href="https://www.kaggle.com/datasets/sertanafak/music-artists-11-years-of-daily-wikipedia-views">public on Kaggle</a>.</p>
+      <div class="stats">
+        <div class="stat"><b>4.7×</b><span>median release-day peak (ordinary Friday 1.3×)</span></div>
+        <div class="stat"><b>5 days</b><span>until half of the jump is gone</span></div>
+        <div class="stat"><b>209,814</b><span>artist-days collected, 2015–2026</span></div>
+      </div>
+      <a class="more" href="analyses/album-attention/">Open the interactive dashboard →</a>
+    </div>
+  </div>
 </section>
 <section class="sec" id="experience" data-title="Experience">
   <h2 class="sec-h"><b>Experience</b></h2>
@@ -305,7 +320,6 @@ footer{max-width:880px;margin:0 auto;padding:22px clamp(16px,4vw,24px) 40px;disp
     <div class="item"><h3><a href="projects/bordeaux-wine/">What makes a 90-point Bordeaux?</a></h3><p>14,349 Wine Spectator reviews as 985 binary descriptors: logistic regression reaches 87.3% accuracy (AUC 0.938) under leakage-checked validation, and praise words out-predict flavour words. The app pairs every wine with cheeses, Turkish equivalents and the nearest shop. <a href="https://github.com/SETOsfk/wineapp">Code</a></p><div class="tags">Python · R · classification · Shiny · Streamlit</div></div>
     <div class="item"><h3>Missing-data imputation benchmark — TÜBİTAK 2209-A</h3><p>Funded research comparing imputation algorithms on large datasets in R, supervised by Prof. Dr. Özlem Gürünlü Alma; presented at an online conference.</p></div>
     <div class="item"><h3><a href="projects/scotch-whisky/">Does Scotch taste follow geography?</a></h3><p>A flavour atlas of 86 distilleries: the link between distance and taste (Mantel ρ 0.20) disappears without Islay (ρ 0.07), and location predicts only smoke and iodine. The app finds the closest taste you can buy in Türkiye, a cheese to pair and shops nearby. <a href="https://github.com/SETOsfk/scotch-whisky-atlas">Code</a></p><div class="tags">Python · R · spatial statistics · permutation tests</div></div>
-    <div class="item"><h3><a href="projects/scotch-whisky/finder/">A Computational Wine Wheel for whisky</a></h3><p>The wine papers' method (Chen et al.) carried over to Scotch on Lee et al.'s flavour wheel: 3,580 phrases → 270 attributes over 2,247 Whisky Advocate reviews, with 94.7% recall and 94.5% precision on 40 reviews read only after the dictionary was frozen. The attributes barely predict a 90+ score (77.8% vs 74.6% baseline) and agree with a tasting panel only on iodine, smoke and fruit. The finder ranks whisky and wine sold in Türkiye by taste, adds cheese and snacks with dated prices, builds a basket and marks the nearest shops. <a href="https://github.com/SETOsfk/scotch-whisky-atlas">Code</a></p><div class="tags">Python · text mining · validation · Leaflet</div></div>
     <div class="item"><h3><a href="projects/shopping-audit/">Can this data answer "who shops online?"</a></h3><p>An audit before modelling: every column of a Kaggle shopping dataset is an independent random draw (strongest of 231 correlations |ρ| = 0.025) and the label is a formula of 8 columns, so a 99.7%-accurate model recovers the generator, not the shopper. <a href="https://github.com/SETOsfk/streamlit-app">Code</a></p><div class="tags">Python · R · data quality · Streamlit</div></div>
   </div>
 </section>
@@ -328,7 +342,7 @@ footer{max-width:880px;margin:0 auto;padding:22px clamp(16px,4vw,24px) 40px;disp
 </section>
 </main>
 <footer>
-  <span>Last updated September 2026</span>
+  <span>Last updated October 2026</span>
   <span>Room modelled and lit in code (Blender + three.js) · the music is an original loop synthesised in your browser · no cookies, no tracking</span>
 </footer>
 
