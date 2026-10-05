@@ -1,0 +1,2672 @@
+{
+  "coverage": {
+    "artists": 51,
+    "days": 4114,
+    "first_day": "2015-07-01",
+    "last_day": "2026-10-04"
+  },
+  "albums": {
+    "candidates": 162,
+    "kept": 144,
+    "dropped": {
+      "after_death": 7,
+      "overlap": 5,
+      "title_filter": 4,
+      "same_day_merged": 2
+    },
+    "artists_with_album": 38
+  },
+  "former_titles": {
+    "Drake": [
+      "Drake (rapper)",
+      "Drake (entertainer)"
+    ],
+    "Jay-Z": [
+      "Jay Z"
+    ],
+    "BTS": [
+      "Bangtan Boys",
+      "BTS (band)"
+    ],
+    "Blackpink": [
+      "Black Pink"
+    ],
+    "Wizkid": [
+      "Wizkid (musician)"
+    ],
+    "Sia": [
+      "Sia (musician)",
+      "Sia Furler"
+    ]
+  },
+  "placebo_n": 1538,
+  "placebo_artists": 42,
+  "peak": {
+    "album_median": 4.74,
+    "album_q1": 2.67,
+    "album_q3": 7.52,
+    "placebo_median": 1.29,
+    "placebo_q90": 3.18,
+    "share_placebo_above_album_median": 5.3,
+    "share_albums_above_placebo_q90": 68.8,
+    "albums_below_1_5x": 7
+  },
+  "excess": {
+    "album_median": 27.8,
+    "album_q1": 12.0,
+    "album_q3": 57.6,
+    "placebo_median": 2.9,
+    "first_week_share_pct": 45,
+    "albums_negative": 10
+  },
+  "curve": {
+    "q25": [
+      0.873,
+      0.874,
+      0.929,
+      0.921,
+      0.893,
+      0.875,
+      0.893,
+      0.895,
+      0.939,
+      0.928,
+      0.911,
+      0.89,
+      0.893,
+      0.879,
+      0.922,
+      0.919,
+      0.938,
+      0.907,
+      0.916,
+      0.897,
+      0.906,
+      0.944,
+      0.946,
+      0.95,
+      0.923,
+      0.905,
+      0.902,
+      0.888,
+      0.924,
+      0.941,
+      0.972,
+      0.964,
+      0.962,
+      0.964,
+      1.116,
+      1.655,
+      1.763,
+      1.598,
+      1.686,
+      1.507,
+      1.453,
+      1.338,
+      1.301,
+      1.356,
+      1.317,
+      1.285,
+      1.222,
+      1.152,
+      1.078,
+      1.043,
+      1.105,
+      1.097,
+      1.008,
+      0.992,
+      0.951,
+      0.977,
+      0.993,
+      1.012,
+      1.022,
+      0.981,
+      0.945,
+      0.935,
+      0.936,
+      0.944,
+      0.928,
+      0.912,
+      0.914,
+      0.877,
+      0.857,
+      0.83,
+      0.853,
+      0.901,
+      0.949,
+      0.893,
+      0.845,
+      0.845,
+      0.864,
+      0.872,
+      0.894,
+      0.927,
+      0.878,
+      0.847,
+      0.848,
+      0.85,
+      0.827,
+      0.878,
+      0.862,
+      0.836,
+      0.809,
+      0.805,
+      0.823
+    ],
+    "q50": [
+      0.99,
+      0.996,
+      1.025,
+      1.014,
+      0.979,
+      0.977,
+      0.975,
+      0.991,
+      1.004,
+      1.005,
+      0.987,
+      0.976,
+      0.985,
+      0.96,
+      1.012,
+      1.004,
+      1.029,
+      1.023,
+      1.009,
+      0.988,
+      0.994,
+      1.041,
+      1.03,
+      1.022,
+      1.013,
+      1.015,
+      0.992,
+      0.984,
+      1.056,
+      1.092,
+      1.112,
+      1.11,
+      1.114,
+      1.149,
+      1.368,
+      3.345,
+      3.051,
+      2.525,
+      2.382,
+      2.222,
+      2.054,
+      1.831,
+      1.798,
+      1.731,
+      1.648,
+      1.67,
+      1.548,
+      1.434,
+      1.358,
+      1.342,
+      1.328,
+      1.343,
+      1.268,
+      1.238,
+      1.237,
+      1.214,
+      1.294,
+      1.258,
+      1.275,
+      1.192,
+      1.194,
+      1.172,
+      1.155,
+      1.163,
+      1.194,
+      1.205,
+      1.151,
+      1.087,
+      1.068,
+      1.044,
+      1.131,
+      1.148,
+      1.162,
+      1.098,
+      1.037,
+      1.025,
+      1.057,
+      1.088,
+      1.078,
+      1.07,
+      1.072,
+      1.048,
+      1.032,
+      0.982,
+      1.018,
+      1.046,
+      1.062,
+      1.029,
+      0.996,
+      0.98,
+      1.011
+    ],
+    "q75": [
+      1.175,
+      1.175,
+      1.205,
+      1.182,
+      1.105,
+      1.103,
+      1.068,
+      1.142,
+      1.116,
+      1.132,
+      1.124,
+      1.131,
+      1.084,
+      1.084,
+      1.135,
+      1.139,
+      1.166,
+      1.204,
+      1.141,
+      1.074,
+      1.096,
+      1.174,
+      1.183,
+      1.207,
+      1.161,
+      1.144,
+      1.126,
+      1.125,
+      1.332,
+      1.317,
+      1.343,
+      1.426,
+      1.404,
+      1.384,
+      2.016,
+      6.595,
+      4.75,
+      4.23,
+      3.748,
+      3.435,
+      3.172,
+      2.782,
+      2.637,
+      2.479,
+      2.221,
+      2.238,
+      2.247,
+      1.979,
+      1.997,
+      1.96,
+      1.821,
+      1.884,
+      1.762,
+      1.652,
+      1.584,
+      1.679,
+      1.678,
+      1.544,
+      1.691,
+      1.588,
+      1.52,
+      1.479,
+      1.443,
+      1.487,
+      1.453,
+      1.634,
+      1.579,
+      1.512,
+      1.448,
+      1.437,
+      1.471,
+      1.501,
+      1.463,
+      1.388,
+      1.399,
+      1.284,
+      1.3,
+      1.311,
+      1.344,
+      1.39,
+      1.378,
+      1.401,
+      1.331,
+      1.309,
+      1.29,
+      1.326,
+      1.359,
+      1.374,
+      1.31,
+      1.342,
+      1.329
+    ],
+    "peak_day": 0,
+    "peak_lift": 3.34,
+    "half_life_days": 5,
+    "lift_day7": 1.8,
+    "lift_day28": 1.16,
+    "lift_day55": 1.01,
+    "pre_week_lift": 1.11
+  },
+  "size_vs_lift": {
+    "spearman_baseline_peak": 0.31,
+    "spearman_baseline_excess": 0.03
+  },
+  "backtest": {
+    "n": 103,
+    "first": "2017-03-13",
+    "last": "2026-06-12",
+    "mae_log10": {
+      "all_median": 0.429,
+      "prev_album": 0.541,
+      "artist_median": 0.528
+    },
+    "factor": {
+      "all_median": 2.69,
+      "prev_album": 3.48,
+      "artist_median": 3.37
+    },
+    "best": "all_median",
+    "improvement_pct": 0
+  },
+  "top_excess": [
+    {
+      "name": "Olivia Rodrigo",
+      "album": "SOUR",
+      "date": "2021-05-21",
+      "peak": 12.5,
+      "excess": 172.5
+    },
+    {
+      "name": "Bad Bunny",
+      "album": "DeBÍ TiRAR MáS FOToS",
+      "date": "2025-01-05",
+      "peak": 13.4,
+      "excess": 165.0
+    },
+    {
+      "name": "Eminem",
+      "album": "Kamikaze",
+      "date": "2018-08-31",
+      "peak": 13.1,
+      "excess": 150.7
+    },
+    {
+      "name": "Kendrick Lamar",
+      "album": "Mr. Morale & the Big Steppers",
+      "date": "2022-05-13",
+      "peak": 39.0,
+      "excess": 149.9
+    },
+    {
+      "name": "Billie Eilish",
+      "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "date": "2019-03-29",
+      "peak": 6.5,
+      "excess": 127.9
+    }
+  ],
+  "low_excess": [
+    {
+      "name": "Katy Perry",
+      "album": "Witness",
+      "date": "2017-06-09",
+      "peak": 2.1,
+      "excess": -16.3
+    },
+    {
+      "name": "Taylor Swift",
+      "album": "1989 (Taylor’s Version)",
+      "date": "2023-10-27",
+      "peak": 1.9,
+      "excess": -9.6
+    },
+    {
+      "name": "Blackpink",
+      "album": "BORN PINK",
+      "date": "2022-09-16",
+      "peak": 2.4,
+      "excess": -9.4
+    },
+    {
+      "name": "Bad Bunny",
+      "album": "LAS QUE NO IBAN A SALIR",
+      "date": "2020-05-10",
+      "peak": 2.5,
+      "excess": -8.0
+    },
+    {
+      "name": "Katy Perry",
+      "album": "Smile",
+      "date": "2020-08-28",
+      "peak": 4.8,
+      "excess": -7.4
+    }
+  ],
+  "events": [
+    {
+      "title": "The_Weeknd",
+      "date": "2015-08-28",
+      "album": "Beauty Behind the Madness",
+      "baseline": 21040.5,
+      "peak": 6.132,
+      "excess": 40.283,
+      "name": "The Weeknd"
+    },
+    {
+      "title": "Prince_(musician)",
+      "date": "2015-09-07",
+      "album": "HITnRUN Phase One",
+      "baseline": 8098.0,
+      "peak": 3.533,
+      "excess": 6.267,
+      "name": "Prince"
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2015-11-12",
+      "album": "Purpose",
+      "baseline": 22949.0,
+      "peak": 2.795,
+      "excess": 30.982,
+      "name": "Justin Bieber"
+    },
+    {
+      "title": "Adele",
+      "date": "2015-11-20",
+      "album": "25",
+      "baseline": 69644.0,
+      "peak": 5.032,
+      "excess": 19.24,
+      "name": "Adele"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2015-11-25",
+      "album": "On a Spaceship",
+      "baseline": 284.0,
+      "peak": 1.401,
+      "excess": 8.218,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Prince_(musician)",
+      "date": "2015-12-12",
+      "album": "HITnRUN Phase Two",
+      "baseline": 7785.5,
+      "peak": 1.414,
+      "excess": 6.195,
+      "name": "Prince"
+    },
+    {
+      "title": "Sia",
+      "date": "2016-01-26",
+      "album": "This Is Acting",
+      "baseline": 12104.5,
+      "peak": 5.893,
+      "excess": 96.183,
+      "name": "Sia"
+    },
+    {
+      "title": "Rihanna",
+      "date": "2016-01-28",
+      "album": "ANTI",
+      "baseline": 12458.0,
+      "peak": 6.235,
+      "excess": 71.662,
+      "name": "Rihanna"
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2016-02-14",
+      "album": "The Life of Pablo",
+      "baseline": 21979.5,
+      "peak": 10.335,
+      "excess": 41.547,
+      "name": "Kanye West"
+    },
+    {
+      "title": "Beyoncé",
+      "date": "2016-04-23",
+      "album": "Lemonade",
+      "baseline": 14569.5,
+      "peak": 12.349,
+      "excess": 79.298,
+      "name": "Beyoncé"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2016-04-29",
+      "album": "Views",
+      "baseline": 19452.5,
+      "peak": 6.702,
+      "excess": 32.824,
+      "name": "Drake"
+    },
+    {
+      "title": "Bob_Dylan",
+      "date": "2016-05-20",
+      "album": "Fallen Angels",
+      "baseline": 8476.0,
+      "peak": 6.029,
+      "excess": 6.192,
+      "name": "Bob Dylan"
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2016-05-20",
+      "album": "Dangerous Woman",
+      "baseline": 16176.0,
+      "peak": 3.977,
+      "excess": 6.375,
+      "name": "Ariana Grande"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2016-06-03",
+      "album": "Energía",
+      "baseline": 1043.0,
+      "peak": 2.434,
+      "excess": -1.226,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2016-09-23",
+      "album": "Redemption",
+      "baseline": 210.0,
+      "peak": 2.652,
+      "excess": 23.038,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2016-10-14",
+      "album": "EVOLution",
+      "baseline": 2854.0,
+      "peak": 4.033,
+      "excess": 11.643,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2016-10-21",
+      "album": "Joanne",
+      "baseline": 19933.0,
+      "peak": 4.399,
+      "excess": 27.987,
+      "name": "Lady Gaga"
+    },
+    {
+      "title": "Bruno_Mars",
+      "date": "2016-11-17",
+      "album": "24K Magic",
+      "baseline": 21241.0,
+      "peak": 7.484,
+      "excess": 41.062,
+      "name": "Bruno Mars"
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2016-11-24",
+      "album": "Starboy",
+      "baseline": 14739.0,
+      "peak": 4.757,
+      "excess": 66.814,
+      "name": "The Weeknd"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2017-03-03",
+      "album": "÷",
+      "baseline": 26034.5,
+      "peak": 7.401,
+      "excess": 51.391,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Bob_Dylan",
+      "date": "2017-03-13",
+      "album": "Triplicate",
+      "baseline": 8981.5,
+      "peak": 1.541,
+      "excess": 7.11,
+      "name": "Bob Dylan"
+    },
+    {
+      "title": "Kendrick_Lamar",
+      "date": "2017-04-14",
+      "album": "DAMN.",
+      "baseline": 12454.0,
+      "peak": 14.487,
+      "excess": 88.988,
+      "name": "Kendrick Lamar"
+    },
+    {
+      "title": "Shakira",
+      "date": "2017-05-26",
+      "album": "El Dorado",
+      "baseline": 13302.0,
+      "peak": 1.849,
+      "excess": 3.847,
+      "name": "Shakira"
+    },
+    {
+      "title": "Dua_Lipa",
+      "date": "2017-06-02",
+      "album": "Dua Lipa",
+      "baseline": 5885.0,
+      "peak": 3.239,
+      "excess": 64.32,
+      "name": "Dua Lipa"
+    },
+    {
+      "title": "Katy_Perry",
+      "date": "2017-06-09",
+      "album": "Witness",
+      "baseline": 24705.0,
+      "peak": 2.149,
+      "excess": -16.308,
+      "name": "Katy Perry"
+    },
+    {
+      "title": "Jay-Z",
+      "date": "2017-06-30",
+      "album": "4:44",
+      "baseline": 9412.0,
+      "peak": 13.708,
+      "excess": 76.355,
+      "name": "Jay-Z"
+    },
+    {
+      "title": "Wizkid",
+      "date": "2017-07-14",
+      "album": "Sounds From the Other Side",
+      "baseline": 2322.0,
+      "peak": 2.168,
+      "excess": -0.725,
+      "name": "Wizkid"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2017-11-10",
+      "album": "reputation",
+      "baseline": 15411.0,
+      "peak": 4.502,
+      "excess": 30.837,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Aretha_Franklin",
+      "date": "2017-11-10",
+      "album": "A Brand New Me",
+      "baseline": 2928.0,
+      "peak": 4.726,
+      "excess": 16.857,
+      "name": "Aretha Franklin"
+    },
+    {
+      "title": "Sia",
+      "date": "2017-11-17",
+      "album": "Everyday Is Christmas",
+      "baseline": 9088.0,
+      "peak": 1.555,
+      "excess": 40.82,
+      "name": "Sia"
+    },
+    {
+      "title": "Eminem",
+      "date": "2017-12-15",
+      "album": "Revival",
+      "baseline": 30437.0,
+      "peak": 2.972,
+      "excess": 1.116,
+      "name": "Eminem"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2018-01-26",
+      "album": "Outside",
+      "baseline": 293.0,
+      "peak": 4.068,
+      "excess": 46.218,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2018-02-28",
+      "album": "Con.Fi.Den.Tial",
+      "baseline": 2990.5,
+      "peak": 2.184,
+      "excess": 5.942,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Cardi_B",
+      "date": "2018-04-05",
+      "album": "Invasion of Privacy",
+      "baseline": 26102.0,
+      "peak": 13.884,
+      "excess": 119.144,
+      "name": "Cardi B"
+    },
+    {
+      "title": "BTS",
+      "date": "2018-05-18",
+      "album": "LOVE YOURSELF 轉 ‘Tear’",
+      "baseline": 31373.5,
+      "peak": 7.125,
+      "excess": 12.058,
+      "name": "BTS"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2018-05-25",
+      "album": "Vibras",
+      "baseline": 3208.0,
+      "peak": 1.591,
+      "excess": 0.887,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2018-06-01",
+      "album": "ye",
+      "baseline": 18961.0,
+      "peak": 9.591,
+      "excess": 15.253,
+      "name": "Kanye West"
+    },
+    {
+      "title": "Lata_Mangeshkar",
+      "date": "2018-06-27",
+      "album": "Aurat",
+      "baseline": 3085.5,
+      "peak": 1.292,
+      "excess": 23.666,
+      "name": "Lata Mangeshkar"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2018-06-29",
+      "album": "Scorpion",
+      "baseline": 20902.5,
+      "peak": 7.86,
+      "excess": 31.533,
+      "name": "Drake"
+    },
+    {
+      "title": "Arijit_Singh",
+      "date": "2018-08-09",
+      "album": "Laila Majnu",
+      "baseline": 3179.5,
+      "peak": 1.272,
+      "excess": 1.221,
+      "name": "Arijit Singh"
+    },
+    {
+      "title": "Nicki_Minaj",
+      "date": "2018-08-10",
+      "album": "Queen",
+      "baseline": 14417.5,
+      "peak": 4.124,
+      "excess": 53.273,
+      "name": "Nicki Minaj"
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2018-08-17",
+      "album": "Sweetener",
+      "baseline": 21409.0,
+      "peak": 7.143,
+      "excess": 97.814,
+      "name": "Ariana Grande"
+    },
+    {
+      "title": "Eminem",
+      "date": "2018-08-31",
+      "album": "Kamikaze",
+      "baseline": 14924.0,
+      "peak": 13.125,
+      "excess": 150.686,
+      "name": "Eminem"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2018-11-09",
+      "album": "Singular: Act I",
+      "baseline": 3271.0,
+      "peak": 3.47,
+      "excess": 14.593,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2018-12-18",
+      "album": "Roar",
+      "baseline": 1742.5,
+      "peak": 1.99,
+      "excess": 13.212,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2018-12-24",
+      "album": "X 100PRE",
+      "baseline": 4019.0,
+      "peak": 2.95,
+      "excess": 23.435,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2019-02-07",
+      "album": "thank u, next",
+      "baseline": 33721.0,
+      "peak": 3.089,
+      "excess": 10.339,
+      "name": "Ariana Grande"
+    },
+    {
+      "title": "Billie_Eilish",
+      "date": "2019-03-29",
+      "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+      "baseline": 31534.5,
+      "peak": 6.457,
+      "excess": 127.853,
+      "name": "Billie Eilish"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2019-06-28",
+      "album": "OASIS",
+      "baseline": 1911.5,
+      "peak": 2.342,
+      "excess": 12.202,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2019-06-28",
+      "album": "OASIS",
+      "baseline": 3015.0,
+      "peak": 1.607,
+      "excess": 3.347,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2019-07-12",
+      "album": "No.6 Collaborations Project",
+      "baseline": 13918.0,
+      "peak": 4.45,
+      "excess": 12.183,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2019-07-19",
+      "album": "Singular: Act II",
+      "baseline": 2841.5,
+      "peak": 1.633,
+      "excess": 10.194,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2019-07-25",
+      "album": "African Giant",
+      "baseline": 2960.0,
+      "peak": 3.274,
+      "excess": 29.451,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2019-08-23",
+      "album": "Lover",
+      "baseline": 15854.5,
+      "peak": 12.085,
+      "excess": 39.006,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2019-10-22",
+      "album": "Hum Do Hamare Dus",
+      "baseline": 1362.0,
+      "peak": 1.152,
+      "excess": 19.78,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2019-10-25",
+      "album": "Jesus Is King",
+      "baseline": 12147.0,
+      "peak": 6.899,
+      "excess": 54.682,
+      "name": "Kanye West"
+    },
+    {
+      "title": "Eminem",
+      "date": "2020-01-17",
+      "album": "Music to Be Murdered By",
+      "baseline": 13335.5,
+      "peak": 13.201,
+      "excess": 80.844,
+      "name": "Eminem"
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2020-02-14",
+      "album": "Changes",
+      "baseline": 18725.5,
+      "peak": 2.564,
+      "excess": 8.739,
+      "name": "Justin Bieber"
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2020-02-19",
+      "album": "After Hours",
+      "baseline": 9591.0,
+      "peak": 2.623,
+      "excess": 67.502,
+      "name": "The Weeknd"
+    },
+    {
+      "title": "BTS",
+      "date": "2020-02-21",
+      "album": "MAP OF THE SOUL : 7",
+      "baseline": 14415.5,
+      "peak": 3.774,
+      "excess": 22.378,
+      "name": "BTS"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-02-29",
+      "album": "YHLQMDLG",
+      "baseline": 3328.0,
+      "peak": 9.409,
+      "excess": 81.477,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2020-03-19",
+      "album": "Colores",
+      "baseline": 2830.5,
+      "peak": 3.199,
+      "excess": 12.315,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Dua_Lipa",
+      "date": "2020-03-21",
+      "album": "Future Nostalgia",
+      "baseline": 16267.0,
+      "peak": 4.725,
+      "excess": 54.399,
+      "name": "Dua Lipa"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-05-10",
+      "album": "LAS QUE NO IBAN A SALIR",
+      "baseline": 4163.5,
+      "peak": 2.491,
+      "excess": -8.049,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2020-05-29",
+      "album": "Chromatica",
+      "baseline": 13898.5,
+      "peak": 5.482,
+      "excess": 15.989,
+      "name": "Lady Gaga"
+    },
+    {
+      "title": "Bob_Dylan",
+      "date": "2020-06-19",
+      "album": "Rough and Rowdy Ways",
+      "baseline": 11544.5,
+      "peak": 2.969,
+      "excess": -0.508,
+      "name": "Bob Dylan"
+    },
+    {
+      "title": "BTS",
+      "date": "2020-07-14",
+      "album": "MAP OF THE SOUL : 7 〜 THE JOURNEY 〜",
+      "baseline": 18118.5,
+      "peak": 1.012,
+      "excess": 6.101,
+      "name": "BTS"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2020-07-24",
+      "album": "folklore",
+      "baseline": 10693.0,
+      "peak": 16.196,
+      "excess": 81.047,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2020-07-30",
+      "album": "G.O.A.T.",
+      "baseline": 1524.0,
+      "peak": 4.795,
+      "excess": 67.55,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2020-08-12",
+      "album": "Twice as Tall",
+      "baseline": 2310.0,
+      "peak": 7.468,
+      "excess": 32.661,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Katy_Perry",
+      "date": "2020-08-28",
+      "album": "Smile",
+      "baseline": 15341.5,
+      "peak": 4.803,
+      "excess": -7.378,
+      "name": "Katy Perry"
+    },
+    {
+      "title": "Blackpink",
+      "date": "2020-10-02",
+      "album": "THE ALBUM",
+      "baseline": 13870.5,
+      "peak": 4.401,
+      "excess": 33.852,
+      "name": "Blackpink"
+    },
+    {
+      "title": "Wizkid",
+      "date": "2020-10-29",
+      "album": "Made in Lagos",
+      "baseline": 1384.0,
+      "peak": 4.315,
+      "excess": 29.05,
+      "name": "Wizkid"
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2020-10-30",
+      "album": "Positions",
+      "baseline": 15472.0,
+      "peak": 4.964,
+      "excess": 58.726,
+      "name": "Ariana Grande"
+    },
+    {
+      "title": "BTS",
+      "date": "2020-11-20",
+      "album": "BE",
+      "baseline": 22281.5,
+      "peak": 2.054,
+      "excess": 3.327,
+      "name": "BTS"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-11-27",
+      "album": "EL ÚLTIMO TOUR DEL MUNDO",
+      "baseline": 4112.5,
+      "peak": 6.56,
+      "excess": 24.528,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2020-12-11",
+      "album": "evermore",
+      "baseline": 15718.0,
+      "peak": 8.535,
+      "excess": 31.825,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2021-03-19",
+      "album": "Justice",
+      "baseline": 14539.5,
+      "peak": 4.335,
+      "excess": 30.091,
+      "name": "Justin Bieber"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2021-04-09",
+      "album": "Fearless (Taylor’s Version)",
+      "baseline": 19916.5,
+      "peak": 3.855,
+      "excess": 8.328,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Olivia_Rodrigo",
+      "date": "2021-05-21",
+      "album": "SOUR",
+      "baseline": 12695.0,
+      "peak": 12.537,
+      "excess": 172.531,
+      "name": "Olivia Rodrigo"
+    },
+    {
+      "title": "Billie_Eilish",
+      "date": "2021-07-30",
+      "album": "Happier Than Ever",
+      "baseline": 14180.0,
+      "peak": 4.222,
+      "excess": 29.433,
+      "name": "Billie Eilish"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2021-08-22",
+      "album": "MoonChild Era",
+      "baseline": 1264.0,
+      "peak": 1.479,
+      "excess": 27.498,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2021-08-29",
+      "album": "Donda",
+      "baseline": 20994.0,
+      "peak": 6.7,
+      "excess": 37.399,
+      "name": "Kanye West"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2021-09-03",
+      "album": "Certified Lover Boy",
+      "baseline": 9253.5,
+      "peak": 13.111,
+      "excess": 55.554,
+      "name": "Drake"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2021-09-10",
+      "album": "JOSE",
+      "baseline": 1841.5,
+      "peak": 3.209,
+      "excess": 18.043,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2021-10-01",
+      "album": "Love for Sale",
+      "baseline": 11912.0,
+      "peak": 2.282,
+      "excess": 34.491,
+      "name": "Lady Gaga"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2021-10-29",
+      "album": "=",
+      "baseline": 12642.5,
+      "peak": 3.858,
+      "excess": 27.916,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2021-11-11",
+      "album": "Red (Taylor’s Version)",
+      "baseline": 15396.5,
+      "peak": 12.278,
+      "excess": 78.708,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Adele",
+      "date": "2021-11-19",
+      "album": "30",
+      "baseline": 28710.0,
+      "peak": 12.255,
+      "excess": 28.654,
+      "name": "Adele"
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2022-01-07",
+      "album": "Dawn FM",
+      "baseline": 7752.5,
+      "peak": 11.435,
+      "excess": 69.052,
+      "name": "The Weeknd"
+    },
+    {
+      "title": "Stromae",
+      "date": "2022-03-03",
+      "album": "Multitude",
+      "baseline": 2367.0,
+      "peak": 3.538,
+      "excess": 21.378,
+      "name": "Stromae"
+    },
+    {
+      "title": "Daddy_Yankee",
+      "date": "2022-03-24",
+      "album": "LEGENDADDY",
+      "baseline": 1376.5,
+      "peak": 10.873,
+      "excess": 76.31,
+      "name": "Daddy Yankee"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2022-05-06",
+      "album": "Un verano sin ti",
+      "baseline": 3449.0,
+      "peak": 6.519,
+      "excess": 62.499,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Kendrick_Lamar",
+      "date": "2022-05-13",
+      "album": "Mr. Morale & the Big Steppers",
+      "baseline": 7529.0,
+      "peak": 39.0,
+      "excess": 149.863,
+      "name": "Kendrick Lamar"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2022-06-17",
+      "album": "Honestly, Nevermind",
+      "baseline": 8319.0,
+      "peak": 11.132,
+      "excess": 35.64,
+      "name": "Drake"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2022-07-07",
+      "album": "Love, Damini",
+      "baseline": 2246.5,
+      "peak": 5.546,
+      "excess": 77.189,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2022-07-15",
+      "album": "emails i can’t send",
+      "baseline": 1858.0,
+      "peak": 7.612,
+      "excess": 59.527,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Beyoncé",
+      "date": "2022-07-29",
+      "album": "RENAISSANCE",
+      "baseline": 11022.0,
+      "peak": 8.407,
+      "excess": 27.614,
+      "name": "Beyoncé"
+    },
+    {
+      "title": "Blackpink",
+      "date": "2022-09-16",
+      "album": "BORN PINK",
+      "baseline": 12506.5,
+      "peak": 2.431,
+      "excess": -9.405,
+      "name": "Blackpink"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2022-10-21",
+      "album": "Midnights",
+      "baseline": 18688.0,
+      "peak": 8.64,
+      "excess": 92.017,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2022-11-04",
+      "album": "Her Loss",
+      "baseline": 9093.5,
+      "peak": 5.279,
+      "excess": 19.279,
+      "name": "Drake"
+    },
+    {
+      "title": "Wizkid",
+      "date": "2022-11-11",
+      "album": "More Love, Less Ego",
+      "baseline": 1220.5,
+      "peak": 3.227,
+      "excess": 16.864,
+      "name": "Wizkid"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2023-05-05",
+      "album": "−",
+      "baseline": 9265.0,
+      "peak": 11.903,
+      "excess": 67.083,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2023-07-07",
+      "album": "Speak Now (Taylor’s Version)",
+      "baseline": 52801.5,
+      "peak": 2.988,
+      "excess": 18.464,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2023-08-25",
+      "album": "I Told Them…",
+      "baseline": 3165.5,
+      "peak": 2.855,
+      "excess": 9.798,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Olivia_Rodrigo",
+      "date": "2023-09-08",
+      "album": "GUTS",
+      "baseline": 15117.5,
+      "peak": 10.382,
+      "excess": 64.742,
+      "name": "Olivia Rodrigo"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2023-09-29",
+      "album": "Autumn Variations",
+      "baseline": 8362.0,
+      "peak": 2.526,
+      "excess": 10.092,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2023-09-29",
+      "album": "Ghost",
+      "baseline": 1434.0,
+      "peak": 1.892,
+      "excess": 15.279,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2023-10-06",
+      "album": "For All the Dogs",
+      "baseline": 11836.0,
+      "peak": 5.714,
+      "excess": 20.873,
+      "name": "Drake"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2023-10-13",
+      "album": "nadie sabe lo que va a pasar mañana",
+      "baseline": 6754.0,
+      "peak": 17.767,
+      "excess": 55.031,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2023-10-27",
+      "album": "1989 (Taylor’s Version)",
+      "baseline": 92970.0,
+      "peak": 1.935,
+      "excess": -9.641,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Nicki_Minaj",
+      "date": "2023-12-08",
+      "album": "Pink Friday 2",
+      "baseline": 8864.5,
+      "peak": 6.419,
+      "excess": 66.586,
+      "name": "Nicki Minaj"
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2024-03-08",
+      "album": "eternal sunshine",
+      "baseline": 15279.5,
+      "peak": 6.949,
+      "excess": 26.439,
+      "name": "Ariana Grande"
+    },
+    {
+      "title": "Shakira",
+      "date": "2024-03-22",
+      "album": "Las mujeres ya no lloran",
+      "baseline": 7046.0,
+      "peak": 4.341,
+      "excess": 26.846,
+      "name": "Shakira"
+    },
+    {
+      "title": "Beyoncé",
+      "date": "2024-03-29",
+      "album": "COWBOY CARTER",
+      "baseline": 20905.0,
+      "peak": 6.805,
+      "excess": 8.601,
+      "name": "Beyoncé"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2024-04-19",
+      "album": "THE TORTURED POETS DEPARTMENT",
+      "baseline": 45146.5,
+      "peak": 5.116,
+      "excess": 5.235,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Sia",
+      "date": "2024-05-03",
+      "album": "Reasonable Woman",
+      "baseline": 4441.5,
+      "peak": 1.983,
+      "excess": -3.501,
+      "name": "Sia"
+    },
+    {
+      "title": "Dua_Lipa",
+      "date": "2024-05-03",
+      "album": "Radical Optimism",
+      "baseline": 15642.0,
+      "peak": 11.581,
+      "excess": 29.869,
+      "name": "Dua Lipa"
+    },
+    {
+      "title": "Billie_Eilish",
+      "date": "2024-05-17",
+      "album": "HIT ME HARD AND SOFT",
+      "baseline": 14421.0,
+      "peak": 5.993,
+      "excess": 35.392,
+      "name": "Billie Eilish"
+    },
+    {
+      "title": "Eminem",
+      "date": "2024-07-12",
+      "album": "The Death of Slim Shady (Coup de Grâce)",
+      "baseline": 23253.5,
+      "peak": 5.695,
+      "excess": 7.591,
+      "name": "Eminem"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2024-08-09",
+      "album": "Rayo",
+      "baseline": 640.5,
+      "peak": 1.786,
+      "excess": 24.642,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2024-08-23",
+      "album": "Short n’ Sweet",
+      "baseline": 23628.5,
+      "peak": 5.304,
+      "excess": 67.916,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Katy_Perry",
+      "date": "2024-09-20",
+      "album": "143",
+      "baseline": 12903.5,
+      "peak": 4.856,
+      "excess": 12.652,
+      "name": "Katy Perry"
+    },
+    {
+      "title": "Wizkid",
+      "date": "2024-11-22",
+      "album": "Morayo",
+      "baseline": 857.0,
+      "peak": 3.764,
+      "excess": 22.186,
+      "name": "Wizkid"
+    },
+    {
+      "title": "Kendrick_Lamar",
+      "date": "2024-11-22",
+      "album": "GNX",
+      "baseline": 8205.5,
+      "peak": 13.826,
+      "excess": 111.668,
+      "name": "Kendrick Lamar"
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2025-01-05",
+      "album": "DeBÍ TiRAR MáS FOToS",
+      "baseline": 3829.0,
+      "peak": 13.429,
+      "excess": 164.993,
+      "name": "Bad Bunny"
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2025-01-31",
+      "album": "Hurry Up Tomorrow",
+      "baseline": 6869.5,
+      "peak": 12.57,
+      "excess": 67.074,
+      "name": "The Weeknd"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2025-02-14",
+      "album": "$ome $exy $ongs 4 U",
+      "baseline": 8104.5,
+      "peak": 8.557,
+      "excess": 74.517,
+      "name": "Drake"
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2025-03-07",
+      "album": "MAYHEM",
+      "baseline": 26366.0,
+      "peak": 5.012,
+      "excess": 2.225,
+      "name": "Lady Gaga"
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2025-03-24",
+      "album": "BULLY",
+      "baseline": 13690.5,
+      "peak": 1.994,
+      "excess": 18.719,
+      "name": "Kanye West"
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2025-07-10",
+      "album": "No Sign of Weakness",
+      "baseline": 1049.5,
+      "peak": 2.677,
+      "excess": 74.094,
+      "name": "Burna Boy"
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2025-07-11",
+      "album": "SWAG",
+      "baseline": 9501.5,
+      "peak": 7.475,
+      "excess": 16.011,
+      "name": "Justin Bieber"
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2025-08-29",
+      "album": "Man’s Best Friend",
+      "baseline": 13547.0,
+      "peak": 5.258,
+      "excess": 49.711,
+      "name": "Sabrina Carpenter"
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2025-09-05",
+      "album": "SWAG II",
+      "baseline": 9017.5,
+      "peak": 2.692,
+      "excess": 2.74,
+      "name": "Justin Bieber"
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2025-09-12",
+      "album": "Play",
+      "baseline": 7554.5,
+      "peak": 2.663,
+      "excess": 13.67,
+      "name": "Ed Sheeran"
+    },
+    {
+      "title": "Cardi_B",
+      "date": "2025-09-19",
+      "album": "AM I THE DRAMA?",
+      "baseline": 10509.0,
+      "peak": 7.68,
+      "excess": 33.282,
+      "name": "Cardi B"
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2025-10-03",
+      "album": "The Life of a Showgirl",
+      "baseline": 20475.0,
+      "peak": 8.599,
+      "excess": 31.083,
+      "name": "Taylor Swift"
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2025-10-15",
+      "album": "AURA",
+      "baseline": 1396.0,
+      "peak": 2.383,
+      "excess": 14.865,
+      "name": "Diljit Dosanjh"
+    },
+    {
+      "title": "Daddy_Yankee",
+      "date": "2025-10-16",
+      "album": "Lamento en baile",
+      "baseline": 1109.5,
+      "peak": 1.959,
+      "excess": 28.595,
+      "name": "Daddy Yankee"
+    },
+    {
+      "title": "Bruno_Mars",
+      "date": "2026-02-27",
+      "album": "The Romantic",
+      "baseline": 14132.0,
+      "peak": 4.124,
+      "excess": -0.367,
+      "name": "Bruno Mars"
+    },
+    {
+      "title": "BTS",
+      "date": "2026-03-20",
+      "album": "ARIRANG",
+      "baseline": 4740.5,
+      "peak": 15.475,
+      "excess": 124.04,
+      "name": "BTS"
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2026-05-08",
+      "album": "OMERTA",
+      "baseline": 680.0,
+      "peak": 1.987,
+      "excess": 16.904,
+      "name": "J Balvin"
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2026-05-15",
+      "album": "ICEMAN",
+      "baseline": 7298.0,
+      "peak": 18.367,
+      "excess": 57.235,
+      "name": "Drake"
+    },
+    {
+      "title": "Olivia_Rodrigo",
+      "date": "2026-06-12",
+      "album": "you seem pretty sad for a girl so in love",
+      "baseline": 14131.5,
+      "peak": 7.017,
+      "excess": 20.661,
+      "name": "Olivia Rodrigo"
+    }
+  ],
+  "backtest_rows": [
+    {
+      "title": "Bob_Dylan",
+      "date": "2017-03-13",
+      "album": "Triplicate",
+      "actual": 0.852,
+      "all_median": 1.469,
+      "prev_album": 0.792,
+      "artist_median": 0.792
+    },
+    {
+      "title": "Sia",
+      "date": "2017-11-17",
+      "album": "Everyday Is Christmas",
+      "actual": 1.611,
+      "all_median": 1.447,
+      "prev_album": 1.983,
+      "artist_median": 1.983
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2018-01-26",
+      "album": "Outside",
+      "actual": 1.665,
+      "all_median": 1.447,
+      "prev_album": 1.362,
+      "artist_median": 1.139
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2018-05-25",
+      "album": "Vibras",
+      "actual": -0.052,
+      "all_median": 1.447,
+      "prev_album": -0.301,
+      "artist_median": -0.301
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2018-06-01",
+      "album": "ye",
+      "actual": 1.183,
+      "all_median": 1.405,
+      "prev_album": 1.619,
+      "artist_median": 1.619
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2018-06-29",
+      "album": "Scorpion",
+      "actual": 1.499,
+      "all_median": 1.368,
+      "prev_album": 1.516,
+      "artist_median": 1.516
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2018-08-17",
+      "album": "Sweetener",
+      "actual": 1.99,
+      "all_median": 1.374,
+      "prev_album": 0.805,
+      "artist_median": 0.805
+    },
+    {
+      "title": "Eminem",
+      "date": "2018-08-31",
+      "album": "Kamikaze",
+      "actual": 2.178,
+      "all_median": 1.411,
+      "prev_album": 0.048,
+      "artist_median": 0.048
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2018-11-09",
+      "album": "Singular: Act I",
+      "actual": 1.164,
+      "all_median": 1.447,
+      "prev_album": 1.066,
+      "artist_median": 1.066
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2018-12-18",
+      "album": "Roar",
+      "actual": 1.121,
+      "all_median": 1.411,
+      "prev_album": 0.774,
+      "artist_median": 0.774
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2019-02-07",
+      "album": "thank u, next",
+      "actual": 1.014,
+      "all_median": 1.372,
+      "prev_album": 1.99,
+      "artist_median": 1.397
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2019-06-28",
+      "album": "OASIS",
+      "actual": 1.086,
+      "all_median": 1.372,
+      "prev_album": -0.052,
+      "artist_median": -0.177
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2019-06-28",
+      "album": "OASIS",
+      "actual": 0.525,
+      "all_median": 1.37,
+      "prev_album": 1.37,
+      "artist_median": 1.37
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2019-07-12",
+      "album": "No.6 Collaborations Project",
+      "actual": 1.086,
+      "all_median": 1.366,
+      "prev_album": 1.711,
+      "artist_median": 1.711
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2019-07-19",
+      "album": "Singular: Act II",
+      "actual": 1.008,
+      "all_median": 1.362,
+      "prev_album": 1.164,
+      "artist_median": 1.115
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2019-07-25",
+      "album": "African Giant",
+      "actual": 1.469,
+      "all_median": 1.323,
+      "prev_album": 1.665,
+      "artist_median": 1.362
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2019-08-23",
+      "album": "Lover",
+      "actual": 1.591,
+      "all_median": 1.362,
+      "prev_album": 1.489,
+      "artist_median": 1.489
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2019-10-22",
+      "album": "Hum Do Hamare Dus",
+      "actual": 1.296,
+      "all_median": 1.366,
+      "prev_album": 1.121,
+      "artist_median": 0.947
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2019-10-25",
+      "album": "Jesus Is King",
+      "actual": 1.738,
+      "all_median": 1.362,
+      "prev_album": 1.183,
+      "artist_median": 1.401
+    },
+    {
+      "title": "Eminem",
+      "date": "2020-01-17",
+      "album": "Music to Be Murdered By",
+      "actual": 1.908,
+      "all_median": 1.366,
+      "prev_album": 2.178,
+      "artist_median": 1.113
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2020-02-14",
+      "album": "Changes",
+      "actual": 0.941,
+      "all_median": 1.37,
+      "prev_album": 1.491,
+      "artist_median": 1.491
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2020-02-19",
+      "album": "After Hours",
+      "actual": 1.829,
+      "all_median": 1.366,
+      "prev_album": 1.825,
+      "artist_median": 1.715
+    },
+    {
+      "title": "BTS",
+      "date": "2020-02-21",
+      "album": "MAP OF THE SOUL : 7",
+      "actual": 1.35,
+      "all_median": 1.37,
+      "prev_album": 1.081,
+      "artist_median": 1.081
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-02-29",
+      "album": "YHLQMDLG",
+      "actual": 1.911,
+      "all_median": 1.366,
+      "prev_album": 0.525,
+      "artist_median": 0.947
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2020-03-19",
+      "album": "Colores",
+      "actual": 1.09,
+      "all_median": 1.37,
+      "prev_album": 1.086,
+      "artist_median": -0.052
+    },
+    {
+      "title": "Dua_Lipa",
+      "date": "2020-03-21",
+      "album": "Future Nostalgia",
+      "actual": 1.736,
+      "all_median": 1.366,
+      "prev_album": 1.808,
+      "artist_median": 1.808
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-05-10",
+      "album": "LAS QUE NO IBAN A SALIR",
+      "actual": -0.301,
+      "all_median": 1.37,
+      "prev_album": 1.911,
+      "artist_median": 1.37
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2020-05-29",
+      "album": "Chromatica",
+      "actual": 1.204,
+      "all_median": 1.366,
+      "prev_album": 1.447,
+      "artist_median": 1.447
+    },
+    {
+      "title": "Bob_Dylan",
+      "date": "2020-06-19",
+      "album": "Rough and Rowdy Ways",
+      "actual": -0.301,
+      "all_median": 1.362,
+      "prev_album": 0.852,
+      "artist_median": 0.822
+    },
+    {
+      "title": "BTS",
+      "date": "2020-07-14",
+      "album": "MAP OF THE SOUL : 7 〜 THE JOURNEY 〜",
+      "actual": 0.785,
+      "all_median": 1.356,
+      "prev_album": 1.35,
+      "artist_median": 1.216
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2020-07-24",
+      "album": "folklore",
+      "actual": 1.909,
+      "all_median": 1.35,
+      "prev_album": 1.591,
+      "artist_median": 1.54
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2020-07-30",
+      "album": "G.O.A.T.",
+      "actual": 1.83,
+      "all_median": 1.356,
+      "prev_album": 1.296,
+      "artist_median": 1.121
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2020-08-12",
+      "album": "Twice as Tall",
+      "actual": 1.514,
+      "all_median": 1.362,
+      "prev_album": 1.469,
+      "artist_median": 1.416
+    },
+    {
+      "title": "Katy_Perry",
+      "date": "2020-08-28",
+      "album": "Smile",
+      "actual": -0.301,
+      "all_median": 1.366,
+      "prev_album": -0.301,
+      "artist_median": -0.301
+    },
+    {
+      "title": "Wizkid",
+      "date": "2020-10-29",
+      "album": "Made in Lagos",
+      "actual": 1.463,
+      "all_median": 1.366,
+      "prev_album": -0.301,
+      "artist_median": -0.301
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2020-10-30",
+      "album": "Positions",
+      "actual": 1.769,
+      "all_median": 1.37,
+      "prev_album": 1.014,
+      "artist_median": 1.014
+    },
+    {
+      "title": "BTS",
+      "date": "2020-11-20",
+      "album": "BE",
+      "actual": 0.522,
+      "all_median": 1.372,
+      "prev_album": 0.785,
+      "artist_median": 1.081
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2020-11-27",
+      "album": "EL ÚLTIMO TOUR DEL MUNDO",
+      "actual": 1.39,
+      "all_median": 1.37,
+      "prev_album": -0.301,
+      "artist_median": 0.947
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2020-12-11",
+      "album": "evermore",
+      "actual": 1.503,
+      "all_median": 1.372,
+      "prev_album": 1.909,
+      "artist_median": 1.591
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2021-03-19",
+      "album": "Justice",
+      "actual": 1.478,
+      "all_median": 1.374,
+      "prev_album": 0.941,
+      "artist_median": 1.216
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2021-04-09",
+      "album": "Fearless (Taylor’s Version)",
+      "actual": 0.921,
+      "all_median": 1.382,
+      "prev_album": 1.503,
+      "artist_median": 1.547
+    },
+    {
+      "title": "Billie_Eilish",
+      "date": "2021-07-30",
+      "album": "Happier Than Ever",
+      "actual": 1.469,
+      "all_median": 1.382,
+      "prev_album": 2.107,
+      "artist_median": 2.107
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2021-08-22",
+      "album": "MoonChild Era",
+      "actual": 1.439,
+      "all_median": 1.39,
+      "prev_album": 1.83,
+      "artist_median": 1.209
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2021-08-29",
+      "album": "Donda",
+      "actual": 1.573,
+      "all_median": 1.414,
+      "prev_album": 1.738,
+      "artist_median": 1.619
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2021-09-03",
+      "album": "Certified Lover Boy",
+      "actual": 1.745,
+      "all_median": 1.439,
+      "prev_album": 1.499,
+      "artist_median": 1.507
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2021-09-10",
+      "album": "JOSE",
+      "actual": 1.256,
+      "all_median": 1.443,
+      "prev_album": 1.09,
+      "artist_median": 0.517
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2021-10-01",
+      "album": "Love for Sale",
+      "actual": 1.538,
+      "all_median": 1.439,
+      "prev_album": 1.204,
+      "artist_median": 1.325
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2021-10-29",
+      "album": "=",
+      "actual": 1.446,
+      "all_median": 1.443,
+      "prev_album": 1.086,
+      "artist_median": 1.398
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2021-11-11",
+      "album": "Red (Taylor’s Version)",
+      "actual": 1.896,
+      "all_median": 1.446,
+      "prev_album": 0.921,
+      "artist_median": 1.503
+    },
+    {
+      "title": "Adele",
+      "date": "2021-11-19",
+      "album": "30",
+      "actual": 1.457,
+      "all_median": 1.446,
+      "prev_album": 1.284,
+      "artist_median": 1.284
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2022-01-07",
+      "album": "Dawn FM",
+      "actual": 1.839,
+      "all_median": 1.447,
+      "prev_album": 1.829,
+      "artist_median": 1.825
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2022-05-06",
+      "album": "Un verano sin ti",
+      "actual": 1.796,
+      "all_median": 1.452,
+      "prev_album": 1.39,
+      "artist_median": 1.37
+    },
+    {
+      "title": "Kendrick_Lamar",
+      "date": "2022-05-13",
+      "album": "Mr. Morale & the Big Steppers",
+      "actual": 2.176,
+      "all_median": 1.457,
+      "prev_album": 1.949,
+      "artist_median": 1.949
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2022-06-17",
+      "album": "Honestly, Nevermind",
+      "actual": 1.552,
+      "all_median": 1.46,
+      "prev_album": 1.745,
+      "artist_median": 1.516
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2022-07-07",
+      "album": "Love, Damini",
+      "actual": 1.888,
+      "all_median": 1.463,
+      "prev_album": 1.514,
+      "artist_median": 1.469
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2022-07-15",
+      "album": "emails i can’t send",
+      "actual": 1.775,
+      "all_median": 1.466,
+      "prev_album": 1.008,
+      "artist_median": 1.066
+    },
+    {
+      "title": "Beyoncé",
+      "date": "2022-07-29",
+      "album": "RENAISSANCE",
+      "actual": 1.441,
+      "all_median": 1.469,
+      "prev_album": 1.899,
+      "artist_median": 1.899
+    },
+    {
+      "title": "Blackpink",
+      "date": "2022-09-16",
+      "album": "BORN PINK",
+      "actual": -0.301,
+      "all_median": 1.466,
+      "prev_album": 1.53,
+      "artist_median": 1.53
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2022-10-21",
+      "album": "Midnights",
+      "actual": 1.964,
+      "all_median": 1.463,
+      "prev_album": 1.896,
+      "artist_median": 1.547
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2022-11-04",
+      "album": "Her Loss",
+      "actual": 1.285,
+      "all_median": 1.466,
+      "prev_album": 1.552,
+      "artist_median": 1.534
+    },
+    {
+      "title": "Wizkid",
+      "date": "2022-11-11",
+      "album": "More Love, Less Ego",
+      "actual": 1.227,
+      "all_median": 1.463,
+      "prev_album": 1.463,
+      "artist_median": 0.581
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2023-05-05",
+      "album": "−",
+      "actual": 1.827,
+      "all_median": 1.46,
+      "prev_album": 1.446,
+      "artist_median": 1.446
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2023-07-07",
+      "album": "Speak Now (Taylor’s Version)",
+      "actual": 1.266,
+      "all_median": 1.463,
+      "prev_album": 1.964,
+      "artist_median": 1.591
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2023-08-25",
+      "album": "I Told Them…",
+      "actual": 0.991,
+      "all_median": 1.46,
+      "prev_album": 1.888,
+      "artist_median": 1.492
+    },
+    {
+      "title": "Olivia_Rodrigo",
+      "date": "2023-09-08",
+      "album": "GUTS",
+      "actual": 1.811,
+      "all_median": 1.457,
+      "prev_album": 2.237,
+      "artist_median": 2.237
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2023-09-29",
+      "album": "Autumn Variations",
+      "actual": 1.004,
+      "all_median": 1.46,
+      "prev_album": 1.827,
+      "artist_median": 1.578
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2023-09-29",
+      "album": "Ghost",
+      "actual": 1.184,
+      "all_median": 1.457,
+      "prev_album": 1.439,
+      "artist_median": 1.296
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2023-10-06",
+      "album": "For All the Dogs",
+      "actual": 1.32,
+      "all_median": 1.452,
+      "prev_album": 1.285,
+      "artist_median": 1.516
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2023-10-13",
+      "album": "nadie sabe lo que va a pasar mañana",
+      "actual": 1.741,
+      "all_median": 1.447,
+      "prev_album": 1.796,
+      "artist_median": 1.38
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2023-10-27",
+      "album": "1989 (Taylor’s Version)",
+      "actual": -0.301,
+      "all_median": 1.452,
+      "prev_album": 1.266,
+      "artist_median": 1.547
+    },
+    {
+      "title": "Nicki_Minaj",
+      "date": "2023-12-08",
+      "album": "Pink Friday 2",
+      "actual": 1.823,
+      "all_median": 1.447,
+      "prev_album": 1.727,
+      "artist_median": 1.727
+    },
+    {
+      "title": "Ariana_Grande",
+      "date": "2024-03-08",
+      "album": "eternal sunshine",
+      "actual": 1.422,
+      "all_median": 1.452,
+      "prev_album": 1.769,
+      "artist_median": 1.392
+    },
+    {
+      "title": "Shakira",
+      "date": "2024-03-22",
+      "album": "Las mujeres ya no lloran",
+      "actual": 1.429,
+      "all_median": 1.447,
+      "prev_album": 0.585,
+      "artist_median": 0.585
+    },
+    {
+      "title": "Beyoncé",
+      "date": "2024-03-29",
+      "album": "COWBOY CARTER",
+      "actual": 0.935,
+      "all_median": 1.446,
+      "prev_album": 1.441,
+      "artist_median": 1.67
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2024-04-19",
+      "album": "THE TORTURED POETS DEPARTMENT",
+      "actual": 0.719,
+      "all_median": 1.446,
+      "prev_album": -0.301,
+      "artist_median": 1.503
+    },
+    {
+      "title": "Sia",
+      "date": "2024-05-03",
+      "album": "Reasonable Woman",
+      "actual": -0.301,
+      "all_median": 1.443,
+      "prev_album": 1.611,
+      "artist_median": 1.797
+    },
+    {
+      "title": "Dua_Lipa",
+      "date": "2024-05-03",
+      "album": "Radical Optimism",
+      "actual": 1.475,
+      "all_median": 1.441,
+      "prev_album": 1.736,
+      "artist_median": 1.772
+    },
+    {
+      "title": "Billie_Eilish",
+      "date": "2024-05-17",
+      "album": "HIT ME HARD AND SOFT",
+      "actual": 1.549,
+      "all_median": 1.443,
+      "prev_album": 1.469,
+      "artist_median": 1.788
+    },
+    {
+      "title": "Eminem",
+      "date": "2024-07-12",
+      "album": "The Death of Slim Shady (Coup de Grâce)",
+      "actual": 0.88,
+      "all_median": 1.446,
+      "prev_album": 1.908,
+      "artist_median": 1.908
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2024-08-09",
+      "album": "Rayo",
+      "actual": 1.392,
+      "all_median": 1.443,
+      "prev_album": 1.256,
+      "artist_median": 1.086
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2024-08-23",
+      "album": "Short n’ Sweet",
+      "actual": 1.832,
+      "all_median": 1.441,
+      "prev_album": 1.775,
+      "artist_median": 1.115
+    },
+    {
+      "title": "Katy_Perry",
+      "date": "2024-09-20",
+      "album": "143",
+      "actual": 1.102,
+      "all_median": 1.443,
+      "prev_album": -0.301,
+      "artist_median": -0.301
+    },
+    {
+      "title": "Wizkid",
+      "date": "2024-11-22",
+      "album": "Morayo",
+      "actual": 1.346,
+      "all_median": 1.441,
+      "prev_album": 1.227,
+      "artist_median": 1.227
+    },
+    {
+      "title": "Kendrick_Lamar",
+      "date": "2024-11-22",
+      "album": "GNX",
+      "actual": 2.048,
+      "all_median": 1.44,
+      "prev_album": 2.176,
+      "artist_median": 2.063
+    },
+    {
+      "title": "Bad_Bunny",
+      "date": "2025-01-05",
+      "album": "DeBÍ TiRAR MáS FOToS",
+      "actual": 2.217,
+      "all_median": 1.441,
+      "prev_album": 1.741,
+      "artist_median": 1.39
+    },
+    {
+      "title": "The_Weeknd",
+      "date": "2025-01-31",
+      "album": "Hurry Up Tomorrow",
+      "actual": 1.827,
+      "all_median": 1.443,
+      "prev_album": 1.839,
+      "artist_median": 1.827
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2025-02-14",
+      "album": "$ome $exy $ongs 4 U",
+      "actual": 1.872,
+      "all_median": 1.446,
+      "prev_album": 1.32,
+      "artist_median": 1.507
+    },
+    {
+      "title": "Lady_Gaga",
+      "date": "2025-03-07",
+      "album": "MAYHEM",
+      "actual": 0.347,
+      "all_median": 1.446,
+      "prev_album": 1.538,
+      "artist_median": 1.447
+    },
+    {
+      "title": "Kanye_West",
+      "date": "2025-03-24",
+      "album": "BULLY",
+      "actual": 1.272,
+      "all_median": 1.446,
+      "prev_album": 1.573,
+      "artist_median": 1.596
+    },
+    {
+      "title": "Burna_Boy",
+      "date": "2025-07-10",
+      "album": "No Sign of Weakness",
+      "actual": 1.87,
+      "all_median": 1.443,
+      "prev_album": 0.991,
+      "artist_median": 1.469
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2025-07-11",
+      "album": "SWAG",
+      "actual": 1.204,
+      "all_median": 1.446,
+      "prev_album": 1.478,
+      "artist_median": 1.478
+    },
+    {
+      "title": "Sabrina_Carpenter",
+      "date": "2025-08-29",
+      "album": "Man’s Best Friend",
+      "actual": 1.696,
+      "all_median": 1.443,
+      "prev_album": 1.832,
+      "artist_median": 1.164
+    },
+    {
+      "title": "Justin_Bieber",
+      "date": "2025-09-05",
+      "album": "SWAG II",
+      "actual": 0.438,
+      "all_median": 1.446,
+      "prev_album": 1.204,
+      "artist_median": 1.341
+    },
+    {
+      "title": "Ed_Sheeran",
+      "date": "2025-09-12",
+      "album": "Play",
+      "actual": 1.136,
+      "all_median": 1.443,
+      "prev_album": 1.004,
+      "artist_median": 1.446
+    },
+    {
+      "title": "Cardi_B",
+      "date": "2025-09-19",
+      "album": "AM I THE DRAMA?",
+      "actual": 1.522,
+      "all_median": 1.441,
+      "prev_album": 2.076,
+      "artist_median": 2.076
+    },
+    {
+      "title": "Taylor_Swift",
+      "date": "2025-10-03",
+      "album": "The Life of a Showgirl",
+      "actual": 1.493,
+      "all_median": 1.443,
+      "prev_album": 0.719,
+      "artist_median": 1.496
+    },
+    {
+      "title": "Diljit_Dosanjh",
+      "date": "2025-10-15",
+      "album": "AURA",
+      "actual": 1.172,
+      "all_median": 1.446,
+      "prev_album": 1.184,
+      "artist_median": 1.24
+    },
+    {
+      "title": "Daddy_Yankee",
+      "date": "2025-10-16",
+      "album": "Lamento en baile",
+      "actual": 1.456,
+      "all_median": 1.443,
+      "prev_album": 1.883,
+      "artist_median": 1.883
+    },
+    {
+      "title": "Bruno_Mars",
+      "date": "2026-02-27",
+      "album": "The Romantic",
+      "actual": -0.301,
+      "all_median": 1.446,
+      "prev_album": 1.613,
+      "artist_median": 1.613
+    },
+    {
+      "title": "BTS",
+      "date": "2026-03-20",
+      "album": "ARIRANG",
+      "actual": 2.094,
+      "all_median": 1.443,
+      "prev_album": 0.522,
+      "artist_median": 0.933
+    },
+    {
+      "title": "J_Balvin",
+      "date": "2026-05-08",
+      "album": "OMERTA",
+      "actual": 1.228,
+      "all_median": 1.446,
+      "prev_album": 1.392,
+      "artist_median": 1.088
+    },
+    {
+      "title": "Drake_(musician)",
+      "date": "2026-05-15",
+      "album": "ICEMAN",
+      "actual": 1.758,
+      "all_median": 1.443,
+      "prev_album": 1.872,
+      "artist_median": 1.516
+    },
+    {
+      "title": "Olivia_Rodrigo",
+      "date": "2026-06-12",
+      "album": "you seem pretty sad for a girl so in love",
+      "actual": 1.315,
+      "all_median": 1.446,
+      "prev_album": 1.811,
+      "artist_median": 2.024
+    }
+  ]
+}
