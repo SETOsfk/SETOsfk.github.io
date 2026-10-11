@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OULAD Text-to-SQL · Sertan Şafak</title>
+<meta name="description" content="Soruyu SQL'e çeviren Gemini ajanı: kayıtlı demo ve ölçüm sonuçları.">
+<meta name="author" content="Sertan Şafak">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 9h20M6 16h20M6 23h12' fill='none' stroke='%232d6a8f' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<script>(function(){try{var m=localStorage.getItem("pd-theme");if(m)document.documentElement.setAttribute("data-theme",m)}catch(e){}})()</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="https://setosfk.github.io/">Sertan Şafak</a>
+  <span class="crumb">/ text-to-sql</span>
+  <span class="sp"></span>
+  <button class="pill" id="lang" type="button" aria-label="Language">EN</button>
+  <button class="pill" id="theme" type="button" aria-label="Theme">◐</button>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="kicker"><b>●</b> <span data-i="kicker"></span></div>
+    <h1 data-i="title"></h1>
+    <p class="lede" data-i="lede"></p>
+    <p class="notice" data-i="notice"></p>
+  </section>
+  <section class="block">
+    <h2 data-i="h2"></h2>
+    <p class="sub" data-i="sub"></p>
+    <div class="qs" id="qs"></div>
+    <div class="card demo" id="out" aria-live="polite"></div>
+  </section>
+  <section class="block">
+    <h2 data-i="h3"></h2>
+    <p class="sub" data-i="sub3"></p>
+    <div class="card tbl sumtbl"><table id="sum"></table></div>
+    <p class="note" data-i="note3"></p>
+  </section>
+  <footer>
+    <div><b data-i="fData"></b><span data-i="fDataTxt"></span></div>
+    <div><b data-i="fCode"></b><a href="https://github.com/SETOsfk/oulad-text-to-sql">github.com/SETOsfk/oulad-text-to-sql</a></div>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

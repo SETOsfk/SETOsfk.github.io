@@ -1,0 +1,294 @@
+[
+ {
+  "id": "q01",
+  "tr": "Veri setinde kaç farklı öğrenci var?",
+  "en": "How many distinct students appear in the dataset?",
+  "ok": true,
+  "sql": "SELECT COUNT(DISTINCT id_student) FROM studentInfo",
+  "cols": [
+   "COUNT(DISTINCT id_student)"
+  ],
+  "rows": [
+   [
+    28785
+   ]
+  ],
+  "n": 1
+ },
+ {
+  "id": "q07",
+  "tr": "Her bölgede kaç kayıt var? Çoktan aza doğru sıralayın.",
+  "en": "How many enrolments are there in each region, from most to fewest?",
+  "ok": true,
+  "sql": "SELECT region, COUNT(*) AS kayit_sayisi FROM studentInfo GROUP BY region ORDER BY kayit_sayisi DESC",
+  "cols": [
+   "region",
+   "kayit_sayisi"
+  ],
+  "rows": [
+   [
+    "Scotland",
+    3446
+   ],
+   [
+    "East Anglian Region",
+    3340
+   ],
+   [
+    "London Region",
+    3216
+   ],
+   [
+    "South Region",
+    3092
+   ],
+   [
+    "North Western Region",
+    2906
+   ],
+   [
+    "West Midlands Region",
+    2582
+   ],
+   [
+    "South West Region",
+    2436
+   ],
+   [
+    "East Midlands Region",
+    2365
+   ],
+   [
+    "South East Region",
+    2111
+   ],
+   [
+    "Wales",
+    2086
+   ],
+   [
+    "Yorkshire Region",
+    2006
+   ],
+   [
+    "North Region",
+    1823
+   ]
+  ],
+  "n": 13
+ },
+ {
+  "id": "q29",
+  "tr": "%10-20 IMD diliminde kaç kayıt var?",
+  "en": "How many enrolments are in the 10-20% IMD band?",
+  "ok": true,
+  "sql": "SELECT count(*) FROM studentInfo WHERE imd_band = '10-20'",
+  "cols": [
+   "count(*)"
+  ],
+  "rows": [
+   [
+    3516
+   ]
+  ],
+  "n": 1
+ },
+ {
+  "id": "q17",
+  "tr": "Her modülün başarı oranı nedir (Pass veya Distinction, yüzde olarak, bir ondalık)?",
+  "en": "What is the pass rate (Pass or Distinction, in percent, one decimal) of each module?",
+  "ok": true,
+  "sql": "SELECT code_module, ROUND(100.0 * SUM(CASE WHEN final_result IN ('Pass', 'Distinction') THEN 1 ELSE 0 END) / COUNT(*), 1) AS success_rate FROM studentInfo GROUP BY code_module",
+  "cols": [
+   "code_module",
+   "success_rate"
+  ],
+  "rows": [
+   [
+    "AAA",
+    71.0
+   ],
+   [
+    "BBB",
+    47.5
+   ],
+   [
+    "CCC",
+    37.8
+   ],
+   [
+    "DDD",
+    41.6
+   ],
+   [
+    "EEE",
+    56.2
+   ],
+   [
+    "FFF",
+    47.0
+   ],
+   [
+    "GGG",
+    59.7
+   ]
+  ],
+  "n": 7
+ },
+ {
+  "id": "q42",
+  "tr": "Eksik dilimleri yok sayarak, her IMD diliminin başarı oranı nedir (Pass veya Distinction, yüzde, bir ondalık)? Dilime göre sıralayın.",
+  "en": "What is the pass rate (Pass or Distinction, percent, one decimal) for each IMD band, ignoring missing bands, ordered by band?",
+  "ok": true,
+  "sql": "SELECT imd_band, ROUND(100.0 * SUM(CASE WHEN final_result IN ('Pass', 'Distinction') THEN 1 ELSE 0 END) / COUNT(*), 1) AS success_rate FROM studentInfo WHERE imd_band IS NOT NULL GROUP BY imd_band ORDER BY imd_band ASC",
+  "cols": [
+   "imd_band",
+   "success_rate"
+  ],
+  "rows": [
+   [
+    "0-10%",
+    35.2
+   ],
+   [
+    "10-20",
+    38.6
+   ],
+   [
+    "20-30%",
+    40.7
+   ],
+   [
+    "30-40%",
+    46.9
+   ],
+   [
+    "40-50%",
+    46.6
+   ],
+   [
+    "50-60%",
+    48.8
+   ],
+   [
+    "60-70%",
+    51.9
+   ],
+   [
+    "70-80%",
+    51.5
+   ],
+   [
+    "80-90%",
+    54.1
+   ],
+   [
+    "90-100%",
+    57.5
+   ]
+  ],
+  "n": 10
+ },
+ {
+  "id": "q50",
+  "tr": "Birden fazla ders sunumuna kaydolmuş öğrencilere ait kaç kayıt var?",
+  "en": "How many enrolments belong to students who enrolled in more than one course presentation?",
+  "ok": true,
+  "sql": "SELECT COUNT(*) FROM studentRegistration WHERE id_student IN (SELECT id_student FROM studentRegistration GROUP BY id_student HAVING COUNT(DISTINCT code_module || '-' || code_presentation) > 1)",
+  "cols": [
+   "COUNT(*)"
+  ],
+  "rows": [
+   [
+    7346
+   ]
+  ],
+  "n": 1
+ },
+ {
+  "id": "q40",
+  "tr": "AAA modülü, 2013J sunumunda öğrenci başına ortalama toplam tıklama sayısı nedir?",
+  "en": "What is the average total number of clicks per student in module AAA, presentation 2013J?",
+  "ok": true,
+  "sql": "SELECT AVG(total_clicks) FROM (SELECT id_student, SUM(sum_click) AS total_clicks FROM studentVle WHERE code_module = 'AAA' AND code_presentation = '2013J' GROUP BY id_student)",
+  "cols": [
+   "AVG(total_clicks)"
+  ],
+  "rows": [
+   [
+    1715.5925925925926
+   ]
+  ],
+  "n": 1
+ },
+ {
+  "id": "q57",
+  "tr": "BBB modülü, 2013J sunumunda kaç öğrenci tüm TMA'ları teslim etti?",
+  "en": "In module BBB, presentation 2013J, how many students submitted every TMA?",
+  "ok": false,
+  "sql": "SELECT count(DISTINCT T1.id_student) FROM studentAssessment AS T1 INNER JOIN assessments AS T2 ON T1.id_assessment = T2.id_assessment WHERE T2.code_module = 'BBB' AND T2.code_presentation = '2013J' AND T2.assessment_type = 'TMA' GROUP BY T1.id_student HAVING count(DISTINCT T2.id_assessment) = (SELECT count(*) FROM assessments WHERE code_module = 'BBB' AND code_presentation = '2013J' AND assessment_type = 'TMA')",
+  "cols": [
+   "count(DISTINCT T1.id_student)"
+  ],
+  "rows": [
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ],
+   [
+    1
+   ]
+  ],
+  "n": 891,
+  "gold_sql": "SELECT COUNT(*) FROM (SELECT sa.id_student FROM studentAssessment sa JOIN assessments a ON a.id_assessment=sa.id_assessment WHERE a.code_module='BBB' AND a.code_presentation='2013J' AND a.assessment_type='TMA' GROUP BY sa.id_student HAVING COUNT(DISTINCT a.id_assessment)=(SELECT COUNT(*) FROM assessments WHERE code_module='BBB' AND code_presentation='2013J' AND assessment_type='TMA'))",
+  "gold_cols": [
+   "COUNT(*)"
+  ],
+  "gold_rows": [
+   [
+    891
+   ]
+  ]
+ },
+ {
+  "id": "a03",
+  "tr": null,
+  "en": "Which region is the best?",
+  "clarify": "Which specific metric (e.g., average student score, pass rate, or total enrollment) should be used to determine the best region?"
+ },
+ {
+  "id": "a08",
+  "tr": null,
+  "en": "Which module is the hardest?",
+  "clarify": "Which metric should be used to determine the hardest module (e.g., lowest average exam score, highest fail/withdrawal rate, or lowest overall passing rate)?"
+ }
+]
